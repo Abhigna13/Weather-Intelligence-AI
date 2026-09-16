@@ -112,20 +112,28 @@ Weather-Intelligence-AI/
 
 ## 📸 Screenshots
 
-### 🌦️ Weather Dashboard
-![Weather Dashboard](screenshots/dashboard.png)
-
 ### 🤖 Weather Research Assistant
-![Research Assistant](screenshots/research-assistant.png)
+![Research Assistant](https://github.com/Abhigna13/Weather-Intelligence-AI/blob/main/api/agent/screenshots/research-assistant.png)
 
 ### 📊 Analytics Dashboard
-![Analytics](screenshots/analytics.png)
+![Analytics](https://github.com/Abhigna13/Weather-Intelligence-AI/blob/main/api/agent/screenshots/analytics.png)
 
 ### 🧠 Model Performance
-![Model Performance](screenshots/model-performance.png)
+![Model Performance](https://github.com/Abhigna13/Weather-Intelligence-AI/blob/main/api/agent/screenshots/model-performance.png)
 
 ### 🔮 Weather Prediction
-![Prediction](screenshots/prediction.png)
+![Prediction History](https://github.com/Abhigna13/Weather-Intelligence-AI/blob/main/api/agent/screenshots/prediction-history.png)
+
+### 🔎 RAG Semantic Search
+![RAG Semantic Search](https://github.com/Abhigna13/Weather-Intelligence-AI/blob/main/api/agent/screenshots/rag-semantic-search.png)
+
+### 🌡️ Temperature Prediction
+![Temperature Prediction](https://github.com/Abhigna13/Weather-Intelligence-AI/blob/main/api/agent/screenshots/temperature-prediction.png)
+
+### 🌦️ Weather Prediction
+![Weather Prediction](https://github.com/Abhigna13/Weather-Intelligence-AI/blob/main/api/agent/screenshots/weather-prediction.png)
+
+
 
 ---
 
