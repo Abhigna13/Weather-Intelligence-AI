@@ -1,0 +1,385 @@
+WEATHER INTELLIGENCE KNOWLEDGE BASE
+
+1. TEMPERATURE
+
+Temperature represents the degree of hotness or coldness of the atmosphere.
+
+Temperature is commonly measured in degrees Celsius (°C).
+
+Higher temperature values generally indicate warmer atmospheric conditions.
+Lower temperature values indicate cooler conditions.
+
+Temperature is influenced by:
+- Solar radiation
+- Season
+- Time of day
+- Cloud cover
+- Humidity
+- Wind
+- Atmospheric pressure
+- Geographic location
+
+Temperature prediction can be performed using machine learning and time-series forecasting techniques.
+
+
+2. HUMIDITY
+
+Humidity represents the amount of water vapor present in the atmosphere.
+
+Relative humidity is generally expressed as a percentage (%).
+
+High humidity means that the atmosphere contains a relatively large amount of moisture.
+
+Low humidity indicates comparatively dry atmospheric conditions.
+
+Humidity affects:
+- Cloud formation
+- Rainfall probability
+- Human comfort
+- Atmospheric moisture
+- Weather patterns
+
+Humidity is an important input variable for weather prediction models.
+
+
+3. ATMOSPHERIC PRESSURE
+
+Atmospheric pressure is the force exerted by the weight of air.
+
+Pressure is commonly measured in millibars (mb).
+
+Higher pressure is often associated with more stable atmospheric conditions.
+
+Lower pressure can be associated with unstable weather conditions and precipitation systems.
+
+Pressure is an important meteorological parameter for weather prediction.
+
+
+4. WIND SPEED
+
+Wind speed represents how fast air is moving.
+
+Wind speed can be measured in kilometres per hour (km/h).
+
+Wind is caused by differences in atmospheric pressure.
+
+Wind speed can affect:
+- Temperature
+- Evaporation
+- Cloud movement
+- Storm development
+- Rainfall distribution
+
+Wind speed is useful as an input feature in machine learning weather models.
+
+
+5. WIND DIRECTION
+
+Wind direction represents the direction from which the wind is coming.
+
+Wind bearing can be represented in degrees from 0° to 360°.
+
+Examples:
+0° represents north.
+90° represents east.
+180° represents south.
+270° represents west.
+
+Wind direction is useful for understanding atmospheric circulation and weather movement.
+
+
+6. VISIBILITY
+
+Visibility represents the maximum distance at which objects can be clearly observed.
+
+Visibility is commonly measured in kilometres.
+
+Low visibility may occur because of:
+- Fog
+- Heavy rainfall
+- Dust
+- Smoke
+- Haze
+- Atmospheric particles
+
+Visibility can provide useful information for weather and environmental analysis.
+
+
+7. CLOUD COVER
+
+Cloud cover represents the amount of the sky covered by clouds.
+
+Clouds influence:
+- Solar radiation
+- Temperature
+- Rainfall
+- Humidity
+- Atmospheric stability
+
+Greater cloud cover can reduce incoming solar radiation and influence surface temperature.
+
+
+8. PRECIPITATION
+
+Precipitation is water that falls from the atmosphere to the Earth's surface.
+
+Common forms include:
+- Rain
+- Snow
+- Sleet
+- Hail
+
+Rainfall prediction is an important component of weather intelligence systems.
+
+Precipitation can be influenced by:
+- Humidity
+- Temperature
+- Pressure
+- Wind
+- Cloud conditions
+- Atmospheric instability
+
+
+9. SOUTHWEST MONSOON
+
+The Indian Southwest Monsoon is a major seasonal weather system.
+
+The monsoon generally brings a large portion of India's annual rainfall.
+
+Important factors influencing monsoon behaviour include:
+- Atmospheric pressure
+- Wind circulation
+- Sea surface conditions
+- Humidity
+- Temperature
+- Cloud systems
+- Large-scale atmospheric patterns
+
+Weather intelligence systems can use historical and real-time meteorological data to support monsoon analysis.
+
+
+10. WEATHER PREDICTION USING MACHINE LEARNING
+
+Machine learning can learn relationships between historical weather observations and target weather variables.
+
+Common machine learning models include:
+- Linear Regression
+- Decision Tree
+- Random Forest
+- Gradient Boosting
+
+Random Forest is an ensemble learning method that combines multiple decision trees.
+
+In the Weather Intelligence AI project, Random Forest achieved the strongest reported performance among the evaluated machine-learning models.
+
+Reported Random Forest evaluation:
+MAE: 1.2231
+RMSE: 1.6763
+R²: 0.9694
+
+
+11. DEEP LEARNING FOR WEATHER FORECASTING
+
+Deep learning models can learn complex patterns from sequential weather data.
+
+Common deep learning models include:
+- LSTM
+- GRU
+- CNN-LSTM
+
+LSTM is useful for sequential and time-dependent data because it can learn long-term dependencies.
+
+In the evaluated deep-learning experiments, LSTM achieved the best reported deep-learning performance.
+
+Reported LSTM evaluation:
+MAE: 4.3072
+RMSE: 5.5849
+R²: 0.3015
+
+
+12. TIME-SERIES FORECASTING
+
+Time-series forecasting uses historical observations ordered by time to predict future values.
+
+Common weather time-series models include:
+- ARIMA
+- SARIMA
+- Holt-Winters
+- Prophet
+
+SARIMA extends ARIMA by modelling seasonal patterns.
+
+In the evaluated time-series experiments, SARIMA achieved the best reported performance.
+
+Reported SARIMA evaluation:
+MAE: 2.2931
+RMSE: 2.7174
+R²: -0.5170
+
+
+13. WEATHER DATA PREPROCESSING
+
+Weather datasets may contain missing values, duplicate records, inconsistent formats, and categorical variables.
+
+Typical preprocessing steps include:
+- Missing-value handling
+- Duplicate removal
+- Date-time conversion
+- Categorical encoding
+- Numerical feature preparation
+- Feature scaling when required
+
+Clean and consistent data improves the reliability of machine-learning experiments.
+
+
+14. FEATURE ENGINEERING
+
+Feature engineering creates useful input variables from existing weather observations.
+
+Examples include:
+- Temperature difference
+- Wind components
+- Weather interactions
+- Hour sine and cosine
+- Month sine and cosine
+- Day-of-week sine and cosine
+
+Cyclic features such as sine and cosine can represent periodic weather patterns more effectively.
+
+
+15. WEATHER INTELLIGENCE APPLICATION
+
+A weather intelligence application can provide:
+- Weather parameter input
+- Temperature prediction
+- Model evaluation
+- Analytics
+- Prediction history
+- API-based prediction
+
+The Weather Intelligence AI application uses a Streamlit interface and FastAPI backend.
+
+The prediction API accepts weather parameters and returns a predicted temperature value.
+
+
+16. RETRIEVAL-AUGMENTED GENERATION
+
+Retrieval-Augmented Generation, or RAG, combines information retrieval with language generation.
+
+A typical RAG pipeline contains:
+1. Knowledge documents
+2. Document chunking
+3. Embedding generation
+4. Vector database
+5. Similarity search
+6. Relevant context retrieval
+7. Language-model response generation
+
+RAG allows an AI assistant to retrieve relevant information from a domain-specific knowledge base before generating an answer.
+
+
+17. VECTOR DATABASE
+
+A vector database stores numerical vector representations of documents.
+
+Documents are converted into vectors called embeddings.
+
+When a user asks a question, the question can also be converted into a vector.
+
+Similarity search can then identify the most relevant document chunks.
+
+FAISS is a library for efficient similarity search over dense vectors.
+
+
+18. WEATHER AI ASSISTANT
+
+A Weather AI Assistant can answer domain-specific questions using a weather knowledge base.
+
+Example questions include:
+- What is humidity?
+- How does atmospheric pressure affect weather?
+- What factors influence rainfall?
+- What is the Southwest Monsoon?
+- Which machine-learning model performed best?
+- What is R²?
+- What is RAG?
+
+The assistant can retrieve relevant knowledge before generating its final response.
+
+
+19. EXPLAINABLE AI
+
+Explainable AI helps users understand why a machine-learning model produces a prediction.
+
+Feature importance can identify which input variables contribute most strongly to a tree-based model.
+
+The Weather Intelligence AI project includes Random Forest feature-importance analysis.
+
+Important reported features include:
+- Month_Cos
+- Humidity
+- Month_Sin
+- Precip Type_snow
+- Month
+- Day
+- Pressure
+- Year
+- Wind_U
+- Hour_Cos
+
+
+20. SATELLITE WEATHER ANALYSIS
+
+Satellite imagery provides visual information about atmospheric and surface conditions.
+
+Computer vision techniques can be applied to satellite images for:
+- Image preprocessing
+- Grayscale conversion
+- Edge detection
+- Cloud analysis
+- Weather pattern analysis
+
+The Weather Intelligence AI project includes satellite image analysis using image-processing techniques.
+
+
+END OF WEATHER KNOWLEDGE BASE
+
+============================================================
+PROJECT-SPECIFIC WEATHER AI MODEL INFORMATION
+============================================================
+
+The Weather Intelligence and Climate Decision Support Platform uses
+RandomForestRegressor as the primary machine learning model for
+temperature prediction in the deployed Weather Prediction API.
+
+The deployed Weather Prediction API accepts 13 weather parameters
+as input for temperature prediction.
+
+The Random Forest model was selected as the best performing machine
+learning model in the project's ML model comparison.
+
+Research evaluation results for the Random Forest model:
+
+MAE: 1.2231 °C
+MSE: 2.8100
+RMSE: 1.6763 °C
+R²: 96.94%
+
+The deployed application evaluation summary reports:
+
+MAE: 1.2434 °C
+MSE: 3.0012
+RMSE: 1.7324 °C
+R²: 96.73%
+
+The FastAPI backend provides the temperature prediction functionality.
+The AI Agent can invoke this prediction functionality through the
+weather prediction tool.
+
+The AI Agent also contains a Weather Research Tool that retrieves
+relevant information from the Weather Knowledge Base and uses the
+local Llama 3.2 model to generate research answers.
+
+Therefore, when a user asks which model is being used for temperature
+prediction in the deployed Weather Intelligence AI application, the
+primary model is RandomForestRegressor.

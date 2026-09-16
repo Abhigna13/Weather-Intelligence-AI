@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.env
+*.log
+.ipynb_checkpoints/
+
+# Large trained model files
+notebooks/best_weather_model.pkl
+models/ml/research_random_forest_model.pkl
+models/optimized_weather_model.pkl
+models/best_weather_model.pkl

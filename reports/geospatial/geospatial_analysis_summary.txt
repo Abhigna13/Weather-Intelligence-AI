@@ -1,0 +1,19 @@
+WEATHER INTELLIGENCE AI - GEOSPATIAL ANALYTICS
+=======================================================
+
+Geospatial library status:
+GeoPandas: 1.1.4
+Shapely: installed
+Folium: installed
+
+Coordinate Reference System: EPSG:4326
+Geographic reference: India
+Latitude: 20.5937
+Longitude: 78.9629
+
+Generated outputs:
+C:\Users\HP\Documents\Weather-Intelligence-AI\reports\geospatial\weather_reference_location.geojson
+C:\Users\HP\Documents\Weather-Intelligence-AI\reports\geospatial\weather_geospatial_map.html
+
+Dataset limitation:
+The original weather dataset does not contain latitude/longitude columns. Therefore, the reference point is used only for geographic visualization and is not presented as an observed weather-station coordinate.

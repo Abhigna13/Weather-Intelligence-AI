@@ -1,0 +1,29 @@
+{
+    "success": true,
+    "workflow": "Scientific Literature Retrieval using LlamaIndex and Llama 3.2",
+    "research_question": "What machine learning and deep learning approaches are useful for weather prediction and climate intelligence?",
+    "retrieved_sources": [
+        {
+            "rank": 1,
+            "literature_id": "LIT-002",
+            "title": "Deep Learning for Weather Forecasting",
+            "domain": "Deep Learning",
+            "similarity_score": 0.7244015233888482
+        },
+        {
+            "rank": 2,
+            "literature_id": "LIT-001",
+            "title": "Machine Learning for Weather and Climate Prediction",
+            "domain": "Machine Learning",
+            "similarity_score": 0.7067022725348067
+        },
+        {
+            "rank": 3,
+            "literature_id": "LIT-005",
+            "title": "Explainable Artificial Intelligence for Weather Prediction",
+            "domain": "Explainable AI",
+            "similarity_score": 0.5344151390654069
+        }
+    ],
+    "generated_summary": "Machine learning and deep learning approaches such as tree-based ensemble models and recurrent architectures like LSTM and GRU are useful for weather prediction and climate intelligence."
+}

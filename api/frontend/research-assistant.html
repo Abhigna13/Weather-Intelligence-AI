@@ -1,0 +1,5697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Weather Intelligence AI Research Assistant"
+    >
+
+    <meta
+        name="theme-color"
+        content="#f7fbff"
+    >
+
+    <title>
+        Weather Intelligence AI | Research Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/style.css"
+    >
+
+    
+
+
+    <style>
+
+        /* ============================================================
+           WEATHER INTELLIGENCE AI
+           RESEARCH ASSISTANT — PREMIUM PAGE
+        ============================================================ */
+
+
+        /* ============================================================
+           PAGE
+        ============================================================ */
+
+        :root{
+            --color-primary: #2563eb;
+            --color-accent: #06b6d4;
+            --color-muted: #64748b;
+            --color-text: #172033;
+            --card-radius: 14px;
+            --card-radius-lg: 18px;
+            --card-padding: 18px;
+            --card-border: rgba(14,64,120,0.06);
+            --shadow-sm: 0 8px 20px rgba(30,70,110,0.04);
+            --shadow-md: 0 14px 35px rgba(15,55,95,0.06);
+            --focus-ring: rgba(37,99,235,0.12);
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: var(--color-text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: transparent;
+            line-height: 1.5;
+        }
+
+        .research-page {
+            position: relative;
+            z-index: 2;
+            padding: 30px 0 70px;
+            box-sizing: border-box;
+        }
+
+
+        /* ============================================================
+           HEADER
+        ============================================================ */
+
+        .research-header {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 28px;
+
+            margin-bottom: 25px;
+
+            padding-bottom: 22px;
+
+            border-bottom:
+                1px solid
+                rgba(148, 163, 184, 0.18);
+
+        }
+
+
+        .research-header::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -1px;
+
+            width: 125px;
+
+            height: 2px;
+
+            border-radius: 999px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #2563eb,
+                    #06b6d4,
+                    transparent
+                );
+
+        }
+
+
+        .research-header h2 {
+
+            margin-top: 8px;
+
+            color: #172033;
+
+            font-size:
+                clamp(
+                    28px,
+                    4vw,
+                    42px
+                );
+
+            font-weight: 850;
+
+            letter-spacing: -1.8px;
+
+            line-height: 1.08;
+
+        }
+
+
+        .research-header p {
+
+            max-width: 760px;
+
+            margin-top: 9px;
+
+            color: #64748b;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* ============================================================
+           SECTION LABEL
+        ============================================================ */
+
+        .research-page .section-label {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color: #2563eb;
+
+            font-size: 8px;
+
+            font-weight: 900;
+
+            letter-spacing: 1.7px;
+
+        }
+
+
+        .research-page .section-label::before {
+
+            content: "";
+
+            width: 6px;
+
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: #06b6d4;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(6,182,212,0.10);
+
+        }
+
+
+        /* ============================================================
+           NAVIGATION
+        ============================================================ */
+
+        .research-nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            flex-shrink: 0;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .research-nav a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 42px;
+
+            padding:
+                0
+                16px;
+
+            border:
+                1px solid
+                rgba(203,213,225,0.75);
+
+            border-radius: 13px;
+
+            background:
+                rgba(255,255,255,0.72);
+
+            color: #2563eb;
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            font-weight: 850;
+
+            box-shadow:
+                0
+                7px
+                20px
+                rgba(30,70,110,0.055);
+
+            backdrop-filter:
+                blur(12px);
+
+            transition:
+                transform .22s ease,
+                box-shadow .22s ease,
+                background .22s ease,
+                border-color .22s ease;
+
+        }
+
+
+        .research-nav a:hover {
+
+            transform:
+                translateY(-3px);
+
+            background:
+                rgba(255,255,255,0.96);
+
+            border-color:
+                rgba(96,165,250,0.55);
+
+            box-shadow:
+                0
+                14px
+                30px
+                rgba(37,99,235,0.12);
+
+        }
+
+
+        /* ============================================================
+           HERO CARD
+        ============================================================ */
+
+        .research-hero {
+
+            position: relative;
+
+            overflow: hidden;
+
+            margin-bottom: 18px;
+
+            padding:
+                28px;
+
+            border: 1px solid rgba(30,70,110,0.04);
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,252,255,0.96));
+            box-shadow: 0 12px 30px rgba(15,55,95,0.04);
+            backdrop-filter: blur(10px);
+
+        }
+
+
+        .research-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+
+            height: 220px;
+
+            right: -80px;
+
+            top: -100px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(37,99,235,0.075);
+
+            filter:
+                blur(5px);
+
+            pointer-events: none;
+
+        }
+
+
+        .research-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+        }
+
+
+        .research-hero-icon {
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 58px;
+
+            height: 58px;
+
+            border-radius: 17px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(37,99,235,0.12),
+                    rgba(6,182,212,0.12)
+                );
+
+            border:
+                1px solid
+                rgba(37,99,235,0.10);
+
+            font-size: 27px;
+
+            box-shadow:
+                0
+                10px
+                25px
+                rgba(37,99,235,0.08);
+
+        }
+
+
+        .research-hero h3 {
+
+            margin: 0;
+
+            color: #172033;
+
+            font-size: 20px;
+
+            font-weight: 850;
+
+            letter-spacing: -0.5px;
+
+        }
+
+
+        .research-hero p {
+
+            margin-top: 6px;
+
+            color: #64748b;
+
+            font-size: 11px;
+
+            line-height: 1.65;
+
+            max-width: 850px;
+
+        }
+
+
+        /* ============================================================
+           MAIN RESEARCH CARD
+        ============================================================ */
+
+        .research-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 29px;
+
+            margin-bottom: 18px;
+
+            border: 1px solid rgba(30,70,110,0.04);
+            border-radius: 16px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.98), rgba(248,252,255,0.96));
+            box-shadow: 0 12px 30px rgba(15,55,95,0.04);
+            backdrop-filter: blur(10px);
+
+        }
+
+
+        .research-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 85px;
+
+            height: 2px;
+
+            border-radius: 999px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #2563eb,
+                    #06b6d4
+                );
+
+        }
+
+
+        .research-card-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .research-card-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+        }
+
+
+        .research-card-icon {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 42px;
+
+            height: 42px;
+
+            border-radius: 12px;
+
+            background:
+                #eff6ff;
+
+            border:
+                1px solid
+                #dbeafe;
+
+            font-size: 19px;
+
+        }
+
+
+        .research-card-title h3 {
+
+            margin: 0;
+
+            color: #172033;
+
+            font-size: 18px;
+
+            font-weight: 850;
+
+        }
+
+
+        .research-card-title p {
+
+            margin-top: 4px;
+
+            color: #94a3b8;
+
+            font-size: 10px;
+
+            line-height: 1.5;
+
+        }
+
+
+        .assistant-status {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            padding:
+                8px
+                11px;
+
+            border-radius:
+                999px;
+
+            background:
+                #ecfdf5;
+
+            border:
+                1px solid
+                #d1fae5;
+
+            color:
+                #059669;
+
+            font-size:
+                9px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                .7px;
+
+        }
+
+
+        .assistant-status::before {
+
+            content: "";
+
+            width: 6px;
+
+            height: 6px;
+
+            border-radius: 50%;
+
+            background:
+                #10b981;
+
+            box-shadow:
+                0
+                0
+                0
+                3px
+                rgba(16,185,129,0.10);
+
+        }
+
+
+        /* ============================================================
+           QUERY AREA
+        ============================================================ */
+
+        .research-query-label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #64748b;
+
+            font-size: 9px;
+
+            font-weight: 850;
+
+            letter-spacing: 1.2px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .research-input-wrapper {
+
+            position: relative;
+
+        }
+
+
+        .research-query {
+
+            width: 100%;
+
+            min-height: 140px;
+
+            resize: vertical;
+
+            padding: 16px 18px;
+
+            border:
+                1px solid
+                #dfeaf5;
+
+            border-radius: 12px;
+
+            background:
+                #ffffff;
+
+            color:
+                #1e293b;
+
+            font-family:
+                inherit;
+
+            font-size: 13px;
+
+            line-height:
+                1.65;
+
+            outline:
+                none;
+
+            box-sizing:
+                border-box;
+
+            box-shadow:
+                inset
+                0
+                1px
+                2px
+                rgba(30,70,110,0.025);
+
+            transition: border-color .18s ease, box-shadow .18s ease, transform .12s ease;
+
+            transition:
+                border-color .2s ease,
+                box-shadow .2s ease;
+
+        }
+
+
+        .research-query::placeholder {
+
+            color:
+                #a1afbf;
+
+        }
+
+
+        .research-query:focus {
+
+            border-color:
+                #93c5fd;
+
+            box-shadow: 0 8px 20px rgba(30,70,110,0.05), 0 0 0 4px var(--focus-ring);
+            transform: translateY(-1px);
+
+        }
+
+
+        /* ============================================================
+           QUERY SUGGESTIONS
+        ============================================================ */
+
+        .research-suggestions {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 11px;
+
+        }
+
+
+        .suggestion-chip {
+
+            padding:
+                8px
+                11px;
+
+            border:
+                1px solid
+                #e1eaf4;
+
+            border-radius:
+                999px;
+
+            background:
+                #f8fbff;
+
+            color:
+                #64748b;
+
+            font-size:
+                9px;
+
+            font-weight:
+                750;
+
+            cursor:
+                pointer;
+
+            transition:
+                transform .2s ease,
+                background .2s ease,
+                color .2s ease,
+                border-color .2s ease;
+
+        }
+
+
+        .suggestion-chip:hover {
+
+            transform:
+                translateY(-2px);
+
+            background:
+                #eff6ff;
+
+            border-color:
+                #bfdbfe;
+
+            color:
+                #2563eb;
+
+        }
+
+
+        /* ============================================================
+           ACTION AREA
+        ============================================================ */
+
+        .research-action {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 18px;
+
+            margin-top: 18px;
+
+            padding-top: 18px;
+
+            border-top:
+                1px solid
+                #edf2f7;
+
+        }
+
+
+        .research-action-info {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+
+        .research-action-icon {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 34px;
+
+            height: 34px;
+
+            border-radius: 10px;
+
+            background:
+                #f0f9ff;
+
+            color:
+                #0284c7;
+
+        }
+
+
+        .research-action-info strong {
+
+            display: block;
+
+            color:
+                #475569;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+        }
+
+
+        .research-action-info small {
+
+            display: block;
+
+            margin-top: 3px;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                9px;
+
+        }
+
+
+        .research-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            min-height:
+                44px;
+
+            padding:
+                0
+                18px;
+
+            border:
+                none;
+
+            border-radius:
+                12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #0891b2
+                );
+
+            color:
+                #ffffff;
+
+            font-size:
+                10px;
+
+            font-weight:
+                850;
+
+            cursor:
+                pointer;
+
+            box-shadow:
+                0
+                10px
+                24px
+                rgba(37,99,235,0.18);
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease,
+                opacity .2s ease;
+
+        }
+
+
+        .research-button:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0
+                14px
+                30px
+                rgba(37,99,235,0.23);
+
+        }
+
+
+        .research-button:active {
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        .research-button:disabled {
+
+            opacity:
+                .6;
+
+            cursor:
+                wait;
+
+            transform:
+                none;
+
+        }
+
+
+        /* ============================================================
+           LOADING
+        ============================================================ */
+
+        .research-loading {
+
+            display:
+                none;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            margin-top:
+                18px;
+
+            padding:
+                14px
+                16px;
+
+            border:
+                1px solid
+                #dbeafe;
+
+            border-radius:
+                14px;
+
+            background:
+                #f8fbff;
+
+            color:
+                #64748b;
+
+            font-size:
+                10px;
+
+        }
+
+
+        .research-loader {
+
+            width:
+                20px;
+
+            height:
+                20px;
+
+            border:
+                2px solid
+                #dbeafe;
+
+            border-top-color:
+                #2563eb;
+
+            border-right-color:
+                #06b6d4;
+
+            border-radius:
+                50%;
+
+            animation:
+                researchSpin .8s
+                linear
+                infinite;
+
+        }
+
+
+        @keyframes researchSpin {
+
+            to {
+
+                transform:
+                    rotate(360deg);
+
+            }
+
+        }
+
+
+        /* ============================================================
+           RESULT
+        ============================================================ */
+
+        .research-result {
+
+            display:
+                none;
+
+            margin-top:
+                20px;
+
+            padding:
+                22px;
+
+            border:
+                1px solid
+                #dceaf6;
+
+            border-radius:
+                18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f5fbff
+                );
+
+            box-shadow:
+                0
+                12px
+                30px
+                rgba(30,70,110,0.055);
+
+        }
+
+
+        .research-result-header {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            padding-bottom:
+                14px;
+
+            border-bottom:
+                1px solid
+                #edf2f7;
+
+        }
+
+
+        .research-result-title {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+        }
+
+
+        .research-result-title-icon {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            width:
+                35px;
+
+            height:
+                35px;
+
+            border-radius:
+                10px;
+
+            background:
+                #eff6ff;
+
+            font-size:
+                16px;
+
+        }
+
+
+        .research-result-title strong {
+
+            color:
+                #172033;
+
+            font-size:
+                13px;
+
+            font-weight:
+                850;
+
+        }
+
+
+        .result-source {
+
+            padding:
+                6px
+                9px;
+
+            border-radius:
+                999px;
+
+            background:
+                #ecfdf5;
+
+            color:
+                #059669;
+
+            font-size:
+                8px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                .7px;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .research-answer {
+
+            margin-top:
+                18px;
+
+            color:
+                #475569;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.8;
+
+            white-space:
+                pre-wrap;
+
+            word-break:
+                break-word;
+
+        }
+
+
+        .research-answer strong {
+
+            color:
+                #172033;
+
+        }
+
+
+        /* ============================================================
+           ERROR
+        ============================================================ */
+
+        .research-error {
+
+            display:
+                none;
+
+            margin-top:
+                15px;
+
+            padding:
+                12px
+                14px;
+
+            border:
+                1px solid
+                #fecaca;
+
+            border-radius:
+                12px;
+
+            background:
+                #fff7f7;
+
+            color:
+                #b91c1c;
+
+            font-size:
+                10px;
+
+            line-height:
+                1.55;
+
+        }
+
+
+        /* ============================================================
+           INFORMATION CARDS
+        ============================================================ */
+
+        .research-info-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    minmax(0, 1fr)
+                );
+
+            gap:
+                14px;
+
+        }
+
+
+        .research-info-card {
+
+            padding: 14px 14px;
+            border: 1px solid rgba(14,64,120,0.06);
+            border-radius: 12px;
+            background: linear-gradient(145deg, #ffffff, #fbfdff);
+            box-shadow: 0 8px 20px rgba(30,70,110,0.03);
+
+            transition:
+                transform .22s ease,
+                box-shadow .22s ease,
+                border-color .22s ease;
+
+        }
+
+
+        .research-info-card:hover {
+
+            transform: translateY(-3px);
+            border-color: rgba(37,99,235,0.09);
+            box-shadow: 0 12px 28px rgba(30,70,110,0.05);
+
+        }
+
+
+        .research-info-icon {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            width:
+                38px;
+
+            height:
+                38px;
+
+            margin-bottom:
+                12px;
+
+            border-radius:
+                11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(37,99,235,0.10),
+                    rgba(6,182,212,0.10)
+                );
+
+            font-size:
+                17px;
+
+        }
+
+
+        .research-info-card span {
+
+            display:
+                block;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                8px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                1.2px;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .research-info-card strong {
+
+            display:
+                block;
+
+            margin-top:
+                6px;
+
+            color:
+                #172033;
+
+            font-size:
+                13px;
+
+            font-weight:
+                850;
+
+        }
+
+
+        .research-info-card p {
+
+            margin-top:
+                6px;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                9px;
+
+            line-height:
+                1.6;
+
+        }
+        
+        /* ============================================================
+   WEATHER PREDICTION PANEL
+============================================================ */
+
+.prediction-panel {
+
+    margin-top: 20px;
+
+    padding: 24px;
+
+    border:
+        1px solid
+        #dceaf6;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f5fbff
+        );
+
+    box-shadow:
+        0
+        14px
+        35px
+        rgba(30,70,110,0.055);
+
+}
+
+
+.prediction-panel-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.prediction-panel-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.prediction-panel-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    font-size: 19px;
+
+}
+
+
+.prediction-panel-title h3 {
+
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 17px;
+
+    font-weight: 850;
+
+}
+
+
+.prediction-panel-title p {
+
+    margin-top: 4px;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+}
+
+
+.prediction-badge {
+
+    padding: 7px 10px;
+
+    border-radius: 999px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 8px;
+
+    font-weight: 850;
+
+    letter-spacing: .7px;
+
+}
+
+
+.prediction-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+}
+
+
+.prediction-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.prediction-field label {
+
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 850;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+
+}
+
+
+.prediction-field input,
+
+.prediction-field select {
+
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 0 11px;
+
+    border:
+        1px solid
+        #dfeaf5;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+}
+
+
+.prediction-field input:focus,
+
+.prediction-field select:focus {
+
+    border-color: #93c5fd;
+
+    box-shadow:
+        0
+        0
+        0
+        3px
+        rgba(37,99,235,0.07);
+
+}
+
+
+.prediction-action {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    border-top:
+        1px solid
+        #edf2f7;
+
+}
+
+
+.prediction-help {
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+}
+
+
+.prediction-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 42px;
+
+    padding: 0 17px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #0891b2
+        );
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 850;
+
+    cursor: pointer;
+
+    box-shadow:
+        0
+        9px
+        22px
+        rgba(37,99,235,0.17);
+
+}
+
+
+.prediction-button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.prediction-button:disabled {
+
+    opacity: .6;
+
+    cursor: wait;
+
+    transform: none;
+
+}
+
+
+.prediction-result {
+
+    display: none;
+
+    margin-top: 16px;
+
+    padding: 18px;
+
+    border:
+        1px solid
+        #bfdbfe;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fbff,
+            #eff6ff
+        );
+
+}
+
+
+.prediction-result-label {
+
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 850;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+.prediction-result-value {
+
+    margin-top: 5px;
+
+    color: #2563eb;
+
+    font-size: 28px;
+
+    font-weight: 900;
+
+}
+
+
+.prediction-result-model {
+
+    margin-top: 4px;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+}
+
+
+@media (max-width: 800px) {
+
+    .prediction-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .prediction-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .prediction-panel-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+    .prediction-action {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+    .prediction-button {
+
+        width: 100%;
+
+    }
+
+}
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+
+        @media (max-width: 900px) {
+
+            .research-info-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .research-header {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+            }
+
+
+            .research-hero-content {
+
+                align-items:
+                    flex-start;
+
+            }
+
+
+            .research-card {
+
+                padding:
+                    21px;
+
+            }
+
+
+            .research-card-header {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .research-action {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .research-button {
+
+                width:
+                    100%;
+
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .research-page {
+
+                padding-left:
+                    12px;
+
+                padding-right:
+                    12px;
+
+            }
+
+
+            .research-hero {
+
+                padding:
+                    20px;
+
+            }
+
+
+            .research-card {
+
+                padding:
+                    18px;
+
+            }
+
+
+            .research-nav {
+
+                width:
+                    100%;
+
+            }
+
+
+            .research-nav a {
+
+                flex:
+                    1;
+
+            }
+
+        }
+
+       
+        /* ============================================================
+   FINAL 4.5 RESEARCH ASSISTANT VISUAL FIX
+   ONLY VISUAL — DO NOT CHANGE JAVASCRIPT
+============================================================ */
+
+/* Main result area */
+#researchResult {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 16px !important;
+}
+
+/* Critical: prevent inherited flex/grid spacing */
+#researchAnswer {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 12px 0 0 0 !important;
+    padding: 0 !important;
+
+    gap: 0 !important;
+    row-gap: 0 !important;
+    column-gap: 0 !important;
+
+    justify-content: flex-start !important;
+    align-content: flex-start !important;
+    align-items: stretch !important;
+
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}
+
+
+/* Remove inherited spacing from dynamically-created blocks */
+#researchAnswer > div {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    gap: 0 !important;
+    row-gap: 0 !important;
+
+    justify-content: flex-start !important;
+}
+
+
+/* ============================================================
+   SCIENTIFIC KNOWLEDGE
+============================================================ */
+
+#researchAnswer > div:first-child {
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+#researchAnswer > div:first-child > div:first-child {
+    margin: 0 0 7px 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+#researchAnswer > div:first-child > div:nth-child(2) {
+    margin: 0 !important;
+    padding: 16px 16px !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 10px !important;
+
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+
+    overflow: visible !important;
+}
+
+
+/* ============================================================
+   SUMMARY CARDS
+============================================================ */
+
+#researchAnswer > div:nth-child(2) {
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 10px !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 0 14px 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+#researchAnswer > div:nth-child(2) > div {
+    display: flex !important;
+
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 70px !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 10px 12px !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 10px !important;
+}
+
+
+/* Card labels */
+#researchAnswer > div:nth-child(2) > div > div:first-child {
+    margin: 0 0 5px 0 !important;
+    padding: 0 !important;
+
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+}
+
+
+/* Card values */
+#researchAnswer > div:nth-child(2) > div > div:last-child {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    line-height: 1.25 !important;
+}
+
+
+/* Temperature */
+#researchAnswer > div:nth-child(2)
+> div:first-child
+> div:last-child {
+    font-size: 22px !important;
+}
+
+
+/* Model */
+#researchAnswer > div:nth-child(2)
+> div:nth-child(2)
+> div:last-child {
+    font-size: 13px !important;
+}
+
+
+/* Satellite */
+#researchAnswer > div:nth-child(2)
+> div:nth-child(3)
+> div:last-child {
+    font-size: 16px !important;
+}
+
+
+/* ============================================================
+   INTEGRATED INTERPRETATION
+============================================================ */
+
+#researchAnswer > div:nth-child(3) {
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+#researchAnswer > div:nth-child(3) > div:first-child {
+    margin: 0 0 7px 0 !important;
+    padding: 0 !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+#researchAnswer > div:nth-child(3) > div:nth-child(2) {
+    margin: 0 !important;
+    padding: 16px 16px !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 10px !important;
+
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+
+    overflow: visible !important;
+}
+
+
+/* ============================================================
+   WORKFLOW FOOTER
+============================================================ */
+
+#researchAnswer > div:nth-child(4) {
+    margin: 8px 0 0 0 !important;
+    padding: 8px 11px !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 7px !important;
+
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+}
+
+
+/* ============================================================
+   REMOVE DEFAULT SPACING FROM ALL CHILDREN
+============================================================ */
+
+#researchAnswer div {
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 800px) {
+
+    #researchAnswer > div:nth-child(2) {
+        grid-template-columns: 1fr !important;
+    }
+
+    #researchAnswer > div:nth-child(2) > div {
+        height: 70px !important;
+        min-height: 70px !important;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #researchAnswer {
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+    }
+
+    #researchAnswer > div:first-child > div:nth-child(2),
+    #researchAnswer > div:nth-child(3) > div:nth-child(2) {
+        padding: 12px 13px !important;
+    }
+
+}  
+
+    /* ============================================================
+   FINAL RESEARCH ASSISTANT UI
+   VISUAL ONLY — DO NOT CHANGE JAVASCRIPT / API
+   ============================================================ */
+
+
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.research-page {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 34px 0 70px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.research-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    margin-bottom: 26px;
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid rgba(148,163,184,.20);
+}
+
+.research-header h2 {
+    margin-top: 8px;
+
+    font-size: clamp(30px, 3.2vw, 40px);
+    line-height: 1.08;
+
+    color: #172033;
+
+    letter-spacing: -1.4px;
+}
+
+.research-header p {
+    max-width: 780px;
+
+    margin-top: 9px;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   SECTION LABEL
+   ============================================================ */
+
+.research-page .section-label {
+    font-size: 9px !important;
+    letter-spacing: 1.6px !important;
+    font-weight: 850 !important;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.research-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.research-nav a {
+    padding: 10px 15px !important;
+
+    border-radius: 12px !important;
+
+    background: rgba(255,255,255,.90) !important;
+
+    border: 1px solid #dce8f5 !important;
+
+    color: #2563eb !important;
+
+    font-size: 10px !important;
+    font-weight: 800 !important;
+
+    text-decoration: none;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.research-nav a:hover {
+    transform: translateY(-2px);
+
+    background: #ffffff !important;
+
+    box-shadow:
+        0 10px 24px rgba(37,99,235,.12);
+}
+
+
+/* ============================================================
+   MAIN RESEARCH CARD
+   ============================================================ */
+
+.research-card {
+    padding: 30px !important;
+
+    margin-bottom: 22px;
+
+    border-radius: 24px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.96),
+            rgba(248,252,255,.84)
+        ) !important;
+
+    border: 1px solid
+        rgba(255,255,255,.96) !important;
+
+    box-shadow:
+        0 25px 55px rgba(15,55,95,.09),
+        inset 0 1px 0 rgba(255,255,255,1) !important;
+
+    backdrop-filter: blur(18px);
+}
+
+
+/* ============================================================
+   RESEARCH CARD HEADER
+   ============================================================ */
+
+.research-card-header {
+    margin-bottom: 24px !important;
+}
+
+.research-card-title {
+    gap: 14px !important;
+}
+
+.research-card-icon {
+    width: 44px !important;
+    height: 44px !important;
+
+    border-radius: 13px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        ) !important;
+
+    border: 1px solid #dbeafe;
+
+    font-size: 20px !important;
+}
+
+.research-card-title h3 {
+    font-size: 18px !important;
+    font-weight: 850 !important;
+}
+
+.research-card-title p {
+    margin-top: 5px !important;
+
+    font-size: 10px !important;
+    line-height: 1.6 !important;
+
+    color: #94a3b8 !important;
+}
+
+
+/* ============================================================
+   AI READY BADGE
+   ============================================================ */
+
+.research-status,
+.research-badge {
+    border-radius: 999px !important;
+
+    padding: 7px 11px !important;
+
+    background: #ecfdf5 !important;
+
+    border: 1px solid #d1fae5 !important;
+
+    color: #059669 !important;
+
+    font-size: 8px !important;
+    font-weight: 850 !important;
+
+    letter-spacing: .7px;
+}
+
+
+/* ============================================================
+   QUERY LABEL
+   ============================================================ */
+
+.research-query-label {
+    margin-bottom: 9px !important;
+
+    color: #64748b !important;
+
+    font-size: 10px !important;
+
+    font-weight: 850 !important;
+
+    letter-spacing: .7px;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   QUERY BOX
+   ============================================================ */
+
+.research-input-wrapper {
+    width: 100%;
+}
+
+.research-query {
+    width: 100% !important;
+
+    min-height: 130px !important;
+
+    padding: 18px !important;
+
+    border-radius: 16px !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #dce8f5 !important;
+
+    color: #334155 !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.65 !important;
+
+    resize: vertical;
+
+    box-shadow:
+        inset 0 1px 3px rgba(30,70,110,.03);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.research-query:hover {
+    border-color: #cbdff5 !important;
+}
+
+.research-query:focus {
+    outline: none !important;
+
+    border-color: #93c5fd !important;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.07),
+        0 8px 20px rgba(30,70,110,.05) !important;
+}
+
+.research-query::placeholder {
+    color: #a1afbf !important;
+}
+
+
+/* ============================================================
+   SUGGESTION BUTTONS
+   ============================================================ */
+
+.research-suggestions {
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 9px !important;
+
+    margin-top: 12px !important;
+}
+
+.research-suggestions button {
+    min-height: 38px;
+
+    padding: 8px 11px !important;
+
+    border-radius: 11px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7fbff
+        ) !important;
+
+    border: 1px solid #e1ebf5 !important;
+
+    color: #64748b !important;
+
+    font-size: 9px !important;
+    font-weight: 750 !important;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+.research-suggestions button:hover {
+    transform: translateY(-2px);
+
+    background: #ffffff !important;
+
+    border-color: #bfdbfe !important;
+
+    color: #2563eb !important;
+
+    box-shadow:
+        0 8px 18px rgba(37,99,235,.08);
+}
+
+
+/* ============================================================
+   ASK BUTTON AREA
+   ============================================================ */
+
+.research-action {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 18px;
+}
+
+.research-action button,
+.research-button {
+    min-height: 44px;
+
+    padding: 11px 19px !important;
+
+    border: none !important;
+
+    border-radius: 12px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        ) !important;
+
+    color: #ffffff !important;
+
+    font-size: 10px !important;
+
+    font-weight: 850 !important;
+
+    box-shadow:
+        0 10px 22px rgba(37,99,235,.18);
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+}
+
+.research-action button:hover,
+.research-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.03);
+
+    box-shadow:
+        0 14px 28px rgba(37,99,235,.23);
+}
+
+.research-action button:active,
+.research-button:active {
+    transform: translateY(0);
+}
+
+.research-action button:disabled,
+.research-button:disabled {
+    opacity: .65;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.research-loading {
+    margin-top: 16px !important;
+
+    padding: 13px 16px !important;
+
+    border-radius: 13px !important;
+
+    background: #f8fbff !important;
+
+    border: 1px solid #dbeafe !important;
+
+    color: #64748b !important;
+
+    font-size: 10px !important;
+}
+
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.research-error {
+    margin-top: 14px !important;
+
+    padding: 13px 15px !important;
+
+    border-radius: 12px !important;
+
+    background: #fff7f7 !important;
+
+    border: 1px solid #fecaca !important;
+
+    color: #b91c1c !important;
+
+    font-size: 11px !important;
+
+    line-height: 1.6 !important;
+}
+
+
+/* ============================================================
+   RESEARCH RESULT
+   ============================================================ */
+
+.research-result {
+    margin-top: 22px !important;
+
+    padding: 28px !important;
+
+    border-radius: 22px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fbff
+        ) !important;
+
+    border: 1px solid #dce8f5 !important;
+
+    box-shadow:
+        0 20px 45px rgba(30,70,110,.07) !important;
+}
+
+
+/* ============================================================
+   RESULT HEADER
+   ============================================================ */
+
+.research-result-header {
+    padding-bottom: 17px !important;
+
+    border-bottom: 1px solid #edf2f7 !important;
+}
+
+.research-result-title {
+    gap: 12px !important;
+}
+
+.research-result-title-icon {
+    width: 40px !important;
+    height: 40px !important;
+
+    border-radius: 12px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        ) !important;
+
+    border: 1px solid #dbeafe;
+
+    font-size: 18px !important;
+}
+
+.research-result-title strong {
+    font-size: 14px !important;
+}
+
+.result-source {
+    padding: 7px 10px !important;
+
+    font-size: 8px !important;
+
+    border-radius: 999px !important;
+}
+
+
+/* ============================================================
+   ANSWER
+   ============================================================ */
+
+.research-answer {
+    margin-top: 22px !important;
+
+    color: #475569 !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.8 !important;
+}
+
+
+/* ============================================================
+   DYNAMIC ANALYTICAL RESULT
+   Overrides existing inline visual styles
+   ============================================================ */
+
+.research-answer > div {
+    box-sizing: border-box;
+}
+
+.research-answer > div[style] {
+    margin-bottom: 18px !important;
+}
+
+.research-answer > div[style*="font-size: 12px"] {
+    font-size: 10px !important;
+
+    font-weight: 850 !important;
+
+    letter-spacing: 1.2px !important;
+
+    color: #2563eb !important;
+
+    text-transform: uppercase;
+}
+
+.research-answer > div[style*="font-size: 36px"] {
+    margin: 5px 0 14px !important;
+
+    font-size: 32px !important;
+
+    line-height: 1.1 !important;
+
+    color: #2563eb !important;
+}
+
+.research-answer > div[style*="background: #f8fafc"] {
+    padding: 20px !important;
+
+    margin-top: 10px !important;
+
+    border-radius: 15px !important;
+
+    background: #f8fbff !important;
+
+    border: 1px solid #e5eef8 !important;
+
+    color: #475569 !important;
+
+    font-size: 12px !important;
+
+    line-height: 1.75 !important;
+}
+
+
+/* ============================================================
+   ANALYTICAL SUMMARY CARDS
+   ============================================================ */
+
+.research-answer > div > div[style*="grid"] {
+    gap: 14px !important;
+}
+
+.research-answer div[style*="grid-template-columns"] > div {
+    padding: 18px !important;
+
+    border-radius: 15px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fbff
+        ) !important;
+
+    border: 1px solid #e5eef8 !important;
+
+    box-shadow:
+        0 8px 20px rgba(30,70,110,.035);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.research-answer div[style*="grid-template-columns"] > div:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(30,70,110,.07);
+}
+
+
+/* ============================================================
+   INTEGRATED INTERPRETATION
+   ============================================================ */
+
+.research-answer div[style*="Integrated Interpretation"] {
+    margin-top: 22px !important;
+
+    margin-bottom: 10px !important;
+}
+
+.research-answer div[style*="background: #eff6ff"] {
+    margin-top: 20px !important;
+
+    padding: 12px 15px !important;
+
+    border-radius: 11px !important;
+
+    background: #eff6ff !important;
+
+    color: #64748b !important;
+
+    font-size: 10px !important;
+
+    line-height: 1.6 !important;
+}
+
+
+/* ============================================================
+   PREDICTION PANEL
+   ============================================================ */
+
+.prediction-panel {
+    margin-top: 22px !important;
+
+    padding: 28px !important;
+
+    border-radius: 24px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.96),
+            rgba(248,252,255,.84)
+        ) !important;
+
+    border: 1px solid
+        rgba(255,255,255,.96) !important;
+
+    box-shadow:
+        0 25px 55px rgba(15,55,95,.09),
+
+        inset 0 1px 0
+        rgba(255,255,255,1) !important;
+
+    backdrop-filter: blur(18px);
+}
+
+
+/* ============================================================
+   PREDICTION HEADER
+   ============================================================ */
+
+.prediction-panel-header {
+    margin-bottom: 22px !important;
+}
+
+.prediction-panel-icon {
+    width: 44px !important;
+    height: 44px !important;
+
+    border-radius: 13px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        ) !important;
+
+    border: 1px solid #dbeafe !important;
+
+    font-size: 20px !important;
+}
+
+.prediction-panel-title h3 {
+    font-size: 18px !important;
+}
+
+.prediction-panel-title p {
+    font-size: 10px !important;
+
+    line-height: 1.6 !important;
+}
+
+.prediction-badge {
+    padding: 7px 11px !important;
+
+    border-radius: 999px !important;
+
+    font-size: 8px !important;
+}
+
+
+/* ============================================================
+   13-PARAMETER GRID
+   ============================================================ */
+
+.prediction-grid {
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px !important;
+}
+
+.prediction-field {
+    padding: 14px !important;
+
+    border-radius: 14px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fbff
+        ) !important;
+
+    border: 1px solid #e5eef8 !important;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.prediction-field:hover {
+    transform: translateY(-2px);
+
+    border-color: #cbdff5 !important;
+
+    box-shadow:
+        0 8px 20px rgba(30,70,110,.055);
+}
+
+.prediction-field label {
+    display: block;
+
+    margin-bottom: 7px !important;
+
+    color: #64748b !important;
+
+    font-size: 9px !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: .7px;
+}
+
+.prediction-field input,
+.prediction-field select {
+    width: 100% !important;
+
+    min-height: 39px !important;
+
+    padding: 9px 11px !important;
+
+    border-radius: 10px !important;
+
+    border: 1px solid #dce8f5 !important;
+
+    background: #ffffff !important;
+
+    color: #334155 !important;
+
+    font-size: 11px !important;
+
+    outline: none;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.prediction-field input:focus,
+.prediction-field select:focus {
+    border-color: #93c5fd !important;
+
+    box-shadow:
+        0 0 0 3px rgba(37,99,235,.07);
+}
+
+
+/* ============================================================
+   PREDICTION ACTION
+   ============================================================ */
+
+.prediction-action {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 22px !important;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #edf2f7;
+}
+
+.prediction-help {
+    color: #94a3b8 !important;
+
+    font-size: 9px !important;
+
+    line-height: 1.5;
+}
+
+.prediction-button {
+    min-height: 44px !important;
+
+    padding: 11px 18px !important;
+
+    border: none !important;
+
+    border-radius: 12px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        ) !important;
+
+    color: #ffffff !important;
+
+    font-size: 10px !important;
+
+    font-weight: 850 !important;
+
+    box-shadow:
+        0 10px 22px rgba(37,99,235,.18);
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.prediction-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 28px rgba(37,99,235,.23);
+}
+
+
+/* ============================================================
+   PREDICTION RESULT
+   ============================================================ */
+
+.prediction-result {
+    margin-top: 20px !important;
+
+    padding: 22px !important;
+
+    border-radius: 16px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        ) !important;
+
+    border: 1px solid #dbeafe !important;
+
+    text-align: center;
+}
+
+.prediction-result-label {
+    color: #64748b !important;
+
+    font-size: 9px !important;
+
+    font-weight: 850 !important;
+
+    letter-spacing: 1px !important;
+
+    text-transform: uppercase;
+}
+
+.prediction-result-value {
+    margin-top: 8px !important;
+
+    color: #2563eb !important;
+
+    font-size: 34px !important;
+
+    font-weight: 900 !important;
+
+    letter-spacing: -1px;
+}
+
+.prediction-result-model {
+    margin-top: 6px !important;
+
+    color: #64748b !important;
+
+    font-size: 10px !important;
+}
+
+
+/* ============================================================
+   INFORMATION CARDS
+   ============================================================ */
+
+.research-info-grid {
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px !important;
+
+    margin-top: 22px;
+}
+
+.research-info-card {
+    min-height: 150px;
+
+    padding: 21px !important;
+
+    border-radius: 20px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.96),
+            rgba(248,252,255,.82)
+        ) !important;
+
+    border: 1px solid
+        rgba(255,255,255,.95) !important;
+
+    box-shadow:
+        0 18px 40px rgba(30,70,110,.07) !important;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.research-info-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 24px 48px rgba(30,70,110,.12) !important;
+}
+
+.research-info-icon {
+    width: 42px !important;
+    height: 42px !important;
+
+    margin-bottom: 14px !important;
+
+    border-radius: 12px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        ) !important;
+
+    border: 1px solid #dbeafe;
+
+    font-size: 19px !important;
+}
+
+.research-info-card span {
+    font-size: 8px !important;
+
+    letter-spacing: 1.2px !important;
+}
+
+.research-info-card strong {
+    margin-top: 7px !important;
+
+    font-size: 14px !important;
+}
+
+.research-info-card p {
+    margin-top: 7px !important;
+
+    color: #64748b !important;
+
+    font-size: 10px !important;
+
+    line-height: 1.6 !important;
+}
+
+
+/* ============================================================
+   RESPONSIVE — TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .research-page {
+        width: min(100% - 28px, 760px);
+    }
+
+    .research-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .research-suggestions {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .prediction-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .research-info-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .research-page {
+        width: calc(100% - 20px);
+
+        padding:
+            22px 0
+            45px;
+    }
+
+    .research-header {
+        margin-bottom: 20px;
+
+        padding-bottom: 18px;
+    }
+
+    .research-header h2 {
+        font-size: 28px;
+    }
+
+    .research-header p {
+        font-size: 12px;
+    }
+
+    .research-card,
+    .prediction-panel {
+        padding: 20px !important;
+
+        border-radius: 20px !important;
+    }
+
+    .research-result {
+        padding: 20px !important;
+    }
+
+    .research-suggestions {
+        grid-template-columns: 1fr;
+    }
+
+    .prediction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prediction-action,
+    .research-action {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .prediction-button,
+    .research-action button,
+    .research-button {
+        width: 100%;
+    }
+
+    .research-nav {
+        width: 100%;
+    }
+
+    .research-nav a {
+        flex: 1;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 400px) {
+
+    .research-page {
+        width: calc(100% - 16px);
+    }
+
+    .research-card,
+    .prediction-panel,
+    .research-result {
+        padding: 16px !important;
+    }
+
+    .research-header h2 {
+        font-size: 25px;
+    }
+
+    .prediction-result-value {
+        font-size: 29px !important;
+    }
+}
+
+    
+    /* ===== Compact AI Answer - final overrides ===== */
+
+    /* Ensure the main AI answer container sizes to its content */
+    #researchAnswer {
+        margin-top: 8px !important;
+        padding: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        gap: 0 !important;
+    }
+
+    /* Reduce vertical gaps between dynamic blocks */
+    #researchAnswer > div,
+    .research-answer > div[style] {
+        margin-top: 0 !important;
+        margin-bottom: 8px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    /* Scientific Knowledge: heading closer to its content */
+    #researchAnswer > div:first-child {
+        margin-bottom: 10px !important;
+    }
+    #researchAnswer > div:first-child > div:nth-child(2) {
+        padding: 16px !important;
+        margin-top: 6px !important;
+        line-height: 1.55 !important;
+    }
+
+    /* Summary cards: tighter gap and compact heights */
+    #researchAnswer > div:nth-child(2) {
+        gap: 10px !important;
+        margin: 0 0 14px 0 !important;
+    }
+    #researchAnswer > div:nth-child(2) > div {
+        min-height: 68px !important;
+        padding: 10px 12px !important;
+    }
+
+    /* Integrated interpretation: reduce spacing and padding */
+    #researchAnswer > div:nth-child(3) { margin-bottom: 10px !important; }
+    #researchAnswer > div:nth-child(3) > div:nth-child(2) {
+        padding: 16px !important;
+        margin-top: 6px !important;
+    }
+
+    /* Footer / conclusion compact */
+    #researchAnswer > div:nth-child(4) {
+        margin-top: 6px !important;
+        padding: 8px 10px !important;
+    }
+
+    /* Prevent any child having large min-height accidentally */
+    #researchAnswer * { min-height: 0 !important; }
+
+    /* Make sure the result card is compact */
+    .research-result { padding: 18px !important; margin-top: 12px !important; }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================================================
+         BACKGROUND
+    ============================================================ -->
+
+    <div class="background-effects">
+
+        <div class="glow glow-one"></div>
+
+        <div class="glow glow-two"></div>
+
+        <div class="grid-overlay"></div>
+
+    </div>
+
+
+    <!-- ============================================================
+         MAIN
+    ============================================================ -->
+
+    <main class="container research-page">
+
+
+        <!-- ========================================================
+             HEADER
+        ======================================================== -->
+
+        <section class="research-header">
+
+            <div>
+
+                <span class="section-label">
+                    GENAI WEATHER ASSISTANT
+                </span>
+
+                <h2>
+                    Weather Research Assistant
+                </h2>
+
+                <p>
+                    Ask weather, climate, forecasting, and project-related
+                    questions and retrieve intelligent answers from the
+                    Weather Intelligence AI knowledge system.
+                </p>
+
+            </div>
+
+
+            <nav class="research-nav">
+
+                <a href="/app">
+                    ← Dashboard
+                </a>
+
+                <a href="/analytics">
+                    Analytics
+                </a>
+
+                <a href="/model-performance-page">
+                    Performance
+                </a>
+
+            </nav>
+
+        </section>
+
+
+        <!-- ========================================================
+             HERO
+        ======================================================== -->
+
+        <section class="research-hero">
+
+            <div class="research-hero-content">
+
+                <div class="research-hero-icon">
+                    🧠
+                </div>
+
+                <div>
+
+                    <h3>
+                        Ask the Weather AI
+                    </h3>
+
+                    <p>
+                        The research assistant retrieves relevant weather
+                        knowledge and connects it with the project's AI
+                        prediction capabilities to provide research-oriented
+                        responses.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================================
+             RESEARCH CARD
+        ======================================================== -->
+
+        <section class="research-card">
+
+
+            <div class="research-card-header">
+
+
+                <div class="research-card-title">
+
+                    <div class="research-card-icon">
+                        🔎
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Research Query
+                        </h3>
+
+                        <p>
+                            Enter a question about weather intelligence,
+                            forecasting, climate, or this project.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="assistant-status">
+                    AI ASSISTANT READY
+                </div>
+
+
+            </div>
+
+
+            <!-- ====================================================
+                 QUERY
+            ===================================================== -->
+
+            <label
+                class="research-query-label"
+                for="researchQuery"
+            >
+                Your Question
+            </label>
+
+
+            <div class="research-input-wrapper">
+
+                <textarea
+                    id="researchQuery"
+                    class="research-query"
+                    placeholder="Example: Which machine learning model is used for temperature prediction in this project?"
+                ></textarea>
+
+            </div>
+
+
+            <!-- ====================================================
+                 SUGGESTIONS
+            ===================================================== -->
+
+            <div class="research-suggestions">
+
+                <button
+                    type="button"
+                    class="suggestion-chip"
+                    onclick="setResearchQuestion(
+                        'Which machine learning model is used for temperature prediction in this project?'
+                    )"
+                >
+                    Project ML Model
+                </button>
+
+
+                <button
+                    type="button"
+                    class="suggestion-chip"
+                    onclick="setResearchQuestion(
+                        'What is retrieval augmented generation in weather intelligence?'
+                    )"
+                >
+                    What is RAG?
+                </button>
+
+
+                <button
+                    type="button"
+                    class="suggestion-chip"
+                    onclick="setResearchQuestion(
+                        'Explain how Random Forest can be used for weather prediction.'
+                    )"
+                >
+                    Random Forest
+                </button>
+
+
+                <button
+                    type="button"
+                    class="suggestion-chip"
+                    onclick="setResearchQuestion(
+                        'What are the important weather parameters used in temperature prediction?'
+                    )"
+                >
+                    Weather Parameters
+                </button>
+
+
+                <button
+                    type="button"
+                    class="suggestion-chip"
+                    onclick="setResearchQuestion(
+                        'Explain the role of satellite image analysis in weather intelligence.'
+                    )"
+                >
+                    Satellite Analysis
+                </button>
+
+            </div>
+
+
+            <!-- ====================================================
+                 ACTION
+            ===================================================== -->
+
+            <div class="research-action">
+
+
+                <div class="research-action-info">
+
+                    <div class="research-action-icon">
+                        ✨
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Ready for research
+                        </strong>
+
+                        <small>
+                            The AI assistant will retrieve relevant knowledge
+                            before generating the response.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="researchButton"
+                    class="research-button"
+                    onclick="askResearchAssistant()"
+                >
+
+                    <span>
+                        🧠
+                    </span>
+
+                    <span>
+                        Ask Weather AI
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- ====================================================
+                 LOADING
+            ===================================================== -->
+
+            <div
+                id="researchLoading"
+                class="research-loading"
+            >
+
+                <div class="research-loader"></div>
+
+                <div>
+
+                    <strong>
+                        Weather AI is researching...
+                    </strong>
+
+                    <div>
+                        Retrieving relevant knowledge and preparing an answer.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ====================================================
+                 ERROR
+            ===================================================== -->
+
+            <div
+                id="researchError"
+                class="research-error"
+            ></div>
+
+
+            <!-- ====================================================
+                 RESULT
+            ===================================================== -->
+
+            <div
+                id="researchResult"
+                class="research-result"
+            >
+
+
+                <div class="research-result-header">
+
+
+                    <div class="research-result-title">
+
+                        <div class="research-result-title-icon">
+                            💡
+                        </div>
+
+                        <strong>
+                            Weather AI Answer
+                        </strong>
+
+                    </div>
+
+
+                    <span
+                        id="resultSource"
+                        class="result-source"
+                    >
+                        RAG
+                    </span>
+
+
+                </div>
+
+
+                <div
+                    id="researchAnswer"
+                    class="research-answer"
+                ></div>
+
+
+            </div>
+
+
+        </section>
+
+        <!-- ========================================================
+     WEATHER PREDICTION
+======================================================== -->
+
+<section class="prediction-panel">
+
+    <div class="prediction-panel-header">
+
+        <div class="prediction-panel-title">
+
+            <div class="prediction-panel-icon">
+                🌡️
+            </div>
+
+            <div>
+
+                <h3>
+                    Weather Temperature Prediction
+                </h3>
+
+                <p>
+                    Provide the 13 weather parameters used by the
+                    project's deployed Random Forest prediction model.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="prediction-badge">
+            MCP + RANDOM FOREST
+        </div>
+
+    </div>
+
+
+    <div class="prediction-grid">
+
+        <div class="prediction-field">
+            <label for="predictionSummary">
+                Summary
+            </label>
+
+            <input
+                id="predictionSummary"
+                type="number"
+                step="any"
+                value="20"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionPrecipType">
+                Precip Type
+            </label>
+
+            <select id="predictionPrecipType">
+
+                <option value="0" selected>
+                    Rain
+                </option>
+
+                <option value="1">
+                    Snow
+                </option>
+
+            </select>
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionApparentTemperature">
+                Apparent Temperature
+            </label>
+
+            <input
+                id="predictionApparentTemperature"
+                type="number"
+                step="any"
+                value="18"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionHumidity">
+                Humidity
+            </label>
+
+            <input
+                id="predictionHumidity"
+                type="number"
+                step="any"
+                min="0"
+                max="1"
+                value="0.65"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionWindSpeed">
+                Wind Speed
+            </label>
+
+            <input
+                id="predictionWindSpeed"
+                type="number"
+                step="any"
+                value="14"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionWindBearing">
+                Wind Bearing
+            </label>
+
+            <input
+                id="predictionWindBearing"
+                type="number"
+                step="any"
+                min="0"
+                max="360"
+                value="225"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionVisibility">
+                Visibility
+            </label>
+
+            <input
+                id="predictionVisibility"
+                type="number"
+                step="any"
+                value="12"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionCloudCover">
+                Cloud Cover
+            </label>
+
+            <input
+                id="predictionCloudCover"
+                type="number"
+                step="any"
+                value="2"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionPressure">
+                Pressure
+            </label>
+
+            <input
+                id="predictionPressure"
+                type="number"
+                step="any"
+                value="1008"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionDailySummary">
+                Daily Summary
+            </label>
+
+            <input
+                id="predictionDailySummary"
+                type="number"
+                step="any"
+                value="150"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionYear">
+                Year
+            </label>
+
+            <input
+                id="predictionYear"
+                type="number"
+                value="2026"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionMonth">
+                Month
+            </label>
+
+            <input
+                id="predictionMonth"
+                type="number"
+                min="1"
+                max="12"
+                value="9"
+            >
+        </div>
+
+
+        <div class="prediction-field">
+            <label for="predictionDay">
+                Day
+            </label>
+
+            <input
+                id="predictionDay"
+                type="number"
+                min="1"
+                max="31"
+                value="11"
+            >
+        </div>
+
+    </div>
+
+
+    <div class="prediction-action">
+
+        <div class="prediction-help">
+            13 parameters • Full AI Agent • MCP • Random Forest
+        </div>
+
+
+        <button
+            id="predictionButton"
+            class="prediction-button"
+            type="button"
+            onclick="predictFromResearchAssistant()"
+        >
+
+            <span>🌡️</span>
+
+            <span>
+                Predict Temperature
+            </span>
+
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+
+    <div
+        id="predictionResult"
+        class="prediction-result"
+    >
+
+        <div class="prediction-result-label">
+            Predicted Temperature
+        </div>
+
+        <div
+            id="predictionValue"
+            class="prediction-result-value"
+        >
+            --
+        </div>
+
+        <div
+            id="predictionModel"
+            class="prediction-result-model"
+        >
+            Model: RandomForestRegressor
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ========================================================
+             INFORMATION CARDS
+        ======================================================== -->
+
+        <section class="research-info-grid">
+
+
+            <div class="research-info-card">
+
+                <div class="research-info-icon">
+                    📚
+                </div>
+
+                <span>
+                    KNOWLEDGE BASE
+                </span>
+
+                <strong>
+                    Weather Knowledge
+                </strong>
+
+                <p>
+                    Retrieves relevant information from the project's
+                    weather-focused knowledge base.
+                </p>
+
+            </div>
+
+
+            <div class="research-info-card">
+
+                <div class="research-info-icon">
+                    🔗
+                </div>
+
+                <span>
+                    RETRIEVAL
+                </span>
+
+                <strong>
+    Semantic FAISS
+</strong>
+
+<p>
+    Uses semantic embeddings with FAISS to retrieve the most relevant
+    weather knowledge for each research query.
+</p>
+
+            </div>
+
+
+            <div class="research-info-card">
+
+                <div class="research-info-icon">
+                    🤖
+                </div>
+
+                <span>
+                    AI AGENT
+                </span>
+
+                <strong>
+                    Weather Research Tool
+                </strong>
+
+                <p>
+                    The research workflow is connected to the Weather AI
+                    agent and prediction API.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ============================================================
+         JAVASCRIPT
+    ============================================================ -->
+     
+   <script>
+
+    /* ============================================================
+       API
+    ============================================================ */
+
+    const RESEARCH_ENDPOINT =
+        `${window.location.origin}/research-full`;
+
+    const ANALYTICAL_ENDPOINT =
+        `${window.location.origin}/analytical-weather`;
+
+
+    /* ============================================================
+       ELEMENT HELPER
+    ============================================================ */
+
+    function getResearchElement(id) {
+
+        return document.getElementById(id);
+
+    }
+
+
+    /* ============================================================
+       SET SUGGESTION
+    ============================================================ */
+
+    function setResearchQuestion(question) {
+
+        const input =
+            getResearchElement("researchQuery");
+
+        if (!input) {
+            return;
+        }
+
+        input.value = question;
+        input.focus();
+
+    }
+
+
+    /* ============================================================
+       LOADING STATE
+    ============================================================ */
+
+    function setResearchLoading(isLoading) {
+
+        const loading =
+            getResearchElement("researchLoading");
+
+        const button =
+            getResearchElement("researchButton");
+
+
+        if (loading) {
+
+            loading.style.display =
+                isLoading ? "flex" : "none";
+
+        }
+
+
+        if (button) {
+
+            button.disabled = isLoading;
+
+            if (isLoading) {
+
+                button.innerHTML = `
+                    <span>⏳</span>
+                    <span>Researching...</span>
+                `;
+
+            } else {
+
+                button.innerHTML = `
+                    <span>🧠</span>
+                    <span>Ask Weather AI</span>
+                    <span>→</span>
+                `;
+
+            }
+
+        }
+
+    }
+
+
+    /* ============================================================
+       SHOW ERROR
+    ============================================================ */
+
+    function showResearchError(message) {
+
+        const error =
+            getResearchElement("researchError");
+
+        if (!error) {
+            return;
+        }
+
+        error.textContent = message;
+        error.style.display = "block";
+
+    }
+
+
+    /* ============================================================
+       HIDE ERROR
+    ============================================================ */
+
+    function hideResearchError() {
+
+        const error =
+            getResearchElement("researchError");
+
+        if (error) {
+
+            error.style.display = "none";
+
+        }
+
+    }
+
+
+    /* ============================================================
+       ESCAPE HTML
+    ============================================================ */
+
+    function escapeResearchHTML(value) {
+
+        if (value === null || value === undefined) {
+            return "";
+        }
+
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* ============================================================
+       GET 13 PREDICTION VALUES
+    ============================================================ */
+
+    function getResearchPredictionValues() {
+
+        const fieldIds = [
+
+            "predictionSummary",
+            "predictionPrecipType",
+            "predictionApparentTemperature",
+            "predictionHumidity",
+            "predictionWindSpeed",
+            "predictionWindBearing",
+            "predictionVisibility",
+            "predictionCloudCover",
+            "predictionPressure",
+            "predictionDailySummary",
+            "predictionYear",
+            "predictionMonth",
+            "predictionDay"
+
+        ];
+
+
+        const fields =
+            fieldIds.map(
+                id => getResearchElement(id)
+            );
+
+
+        if (
+            fields.some(
+                field => !field
+            )
+        ) {
+
+            showResearchError(
+                "One or more prediction fields are missing from the page."
+            );
+
+            return null;
+
+        }
+
+
+        const values =
+            fields.map(
+                field => Number(field.value)
+            );
+
+
+        if (
+            values.some(
+                value => Number.isNaN(value)
+            )
+        ) {
+
+            showResearchError(
+                "Please enter valid values for all 13 weather parameters."
+            );
+
+            return null;
+
+        }
+
+
+        if (values.length !== 13) {
+
+            showResearchError(
+                "Exactly 13 weather parameters are required."
+            );
+
+            return null;
+
+        }
+
+
+        return values;
+
+    }
+
+
+    /* ============================================================
+       DETECT ANALYTICAL QUERY
+    ============================================================ */
+
+    function isAnalyticalQuery(query) {
+
+        const text =
+            query.toLowerCase();
+
+
+        const analyticalPhrases = [
+
+            "analytical weather",
+            "analytical workflow",
+            "integrated analysis",
+            "integrated interpretation",
+            "satellite cloud",
+            "satellite information",
+            "satellite analysis",
+            "cloud information",
+            "weather prediction using satellite",
+            "weather prediction and satellite",
+            "scientific knowledge and satellite",
+            "scientific knowledge with satellite",
+            "analyze the weather prediction",
+            "analyse the weather prediction",
+            "analyze weather prediction",
+            "analyse weather prediction"
+
+        ];
+
+
+        return analyticalPhrases.some(
+            phrase => text.includes(phrase)
+        );
+
+    }
+
+
+    /* ============================================================
+       SHOW NORMAL RESEARCH RESULT
+    ============================================================ */
+
+    function showNormalResearchResult(agentResult) {
+
+        const answerCard =
+            getResearchElement("researchResult");
+
+        const answerText =
+            getResearchElement("researchAnswer");
+
+        const answerSource =
+            getResearchElement("resultSource");
+
+
+        if (
+            !answerCard ||
+            !answerText ||
+            !answerSource
+        ) {
+
+            console.error(
+                "Research result elements were not found."
+            );
+
+            showResearchError(
+                "Research result section could not be displayed."
+            );
+
+            return;
+
+        }
+
+
+        answerCard.style.display = "block";
+
+
+        /* ========================================================
+           PREDICTION RESPONSE
+        ======================================================== */
+
+        if (
+            agentResult &&
+            agentResult.route === "prediction"
+        ) {
+
+            const predictionData =
+                agentResult.answer;
+
+
+            if (
+                predictionData &&
+                predictionData.prediction &&
+                predictionData.prediction
+                    .predicted_temperature_celsius !== undefined
+            ) {
+
+                const temperature =
+                    predictionData.prediction
+                        .predicted_temperature_celsius;
+
+
+                const model =
+                    predictionData.model &&
+                    predictionData.model.model_name
+                        ? predictionData.model.model_name
+                        : "RandomForestRegressor";
+
+
+                answerSource.textContent =
+                    "AI AGENT • PREDICTION";
+
+
+                answerText.innerHTML = `
+
+                    <div style="
+                        font-size: 14px;
+                        color: #64748b;
+                        margin-bottom: 8px;
+                    ">
+                        Temperature Prediction
+                    </div>
+
+                    <div style="
+                        font-size: 36px;
+                        font-weight: 800;
+                        color: #2563eb;
+                        margin-bottom: 10px;
+                    ">
+                        ${Number(temperature).toFixed(2)} °C
+                    </div>
+
+                    <div style="
+                        font-size: 14px;
+                        color: #475569;
+                    ">
+                        Model:
+                        <strong>
+                            ${escapeResearchHTML(model)}
+                        </strong>
+                    </div>
+
+                    <div style="
+                        font-size: 13px;
+                        color: #64748b;
+                        margin-top: 8px;
+                    ">
+                        Prediction generated through MCP + AI Agent.
+                    </div>
+
+                `;
+
+                return;
+
+            }
+
+
+            answerSource.textContent =
+                "AI AGENT • PREDICTION";
+
+            answerText.textContent =
+                "The prediction service responded, but the temperature value was not returned correctly.";
+
+            return;
+
+        }
+
+
+        /* ========================================================
+           NORMAL RESEARCH RESPONSE
+        ======================================================== */
+
+        answerSource.textContent =
+            "AI AGENT • RESEARCH";
+
+
+        if (
+            typeof agentResult.answer === "string"
+        ) {
+
+            answerText.textContent =
+                agentResult.answer;
+
+        } else {
+
+            answerText.textContent =
+                "The research response was not returned correctly.";
+
+        }
+
+    }
+
+
+    /* ============================================================
+       SHOW ANALYTICAL RESULT
+    ============================================================ */
+
+    function showAnalyticalResult(data) {
+
+        const answerCard =
+            getResearchElement("researchResult");
+
+        const answerText =
+            getResearchElement("researchAnswer");
+
+        const answerSource =
+            getResearchElement("resultSource");
+
+
+        if (
+            !answerCard ||
+            !answerText ||
+            !answerSource
+        ) {
+
+            console.error(
+                "Analytical result elements were not found."
+            );
+
+            showResearchError(
+                "Analytical result section could not be displayed."
+            );
+
+            return;
+
+        }
+
+
+        answerCard.style.display = "block";
+
+
+        if (
+            !data ||
+            !data.success ||
+            !data.result
+        ) {
+
+            answerSource.textContent =
+                "AI AGENT • ANALYTICAL";
+
+            answerText.textContent =
+                "The analytical weather workflow did not return a valid result.";
+
+            return;
+
+        }
+
+
+        const result =
+            data.result;
+
+
+        /* ========================================================
+           SCIENTIFIC KNOWLEDGE
+        ======================================================== */
+
+        const scientificKnowledge =
+            result.scientific_knowledge;
+
+
+        /* ========================================================
+           WEATHER PREDICTION
+        ======================================================== */
+
+        let weatherPrediction =
+            result.weather_prediction;
+
+
+        if (
+            typeof weatherPrediction === "string"
+        ) {
+
+            try {
+
+                weatherPrediction =
+                    JSON.parse(weatherPrediction);
+
+            } catch {
+
+                /* Keep original value */
+
+            }
+
+        }
+
+
+        let predictedTemperature =
+            result.predicted_temperature;
+
+
+        if (
+            predictedTemperature === null ||
+            predictedTemperature === undefined
+        ) {
+
+            if (
+                weatherPrediction &&
+                weatherPrediction.prediction &&
+                weatherPrediction.prediction
+                    .predicted_temperature_celsius !== undefined
+            ) {
+
+                predictedTemperature =
+                    weatherPrediction.prediction
+                        .predicted_temperature_celsius;
+
+            }
+
+        }
+
+
+        /* ========================================================
+           MODEL
+        ======================================================== */
+
+        let modelName =
+            "RandomForestRegressor";
+
+
+        if (
+            weatherPrediction &&
+            weatherPrediction.model &&
+            weatherPrediction.model.model_name
+        ) {
+
+            modelName =
+                weatherPrediction.model.model_name;
+
+        }
+
+
+        /* ========================================================
+           SATELLITE CLASSIFICATION
+        ======================================================== */
+
+        const satelliteClassification =
+            result.satellite_classification ||
+            (
+                result.satellite_analysis &&
+                (
+                    result.satellite_analysis.classification ||
+                    result.satellite_analysis.prediction
+                )
+            ) ||
+            "Not available";
+
+
+        /* ========================================================
+           INTEGRATED INTERPRETATION
+        ======================================================== */
+
+        const integratedAnalysis =
+            result.integrated_analysis;
+
+
+        /* ========================================================
+           SCIENTIFIC TEXT
+        ======================================================== */
+
+        let scientificText = "";
+
+        if (
+            typeof scientificKnowledge === "string"
+        ) {
+
+            scientificText =
+                escapeResearchHTML(
+                    scientificKnowledge
+                )
+                .replace(/\n/g, "<br>");
+
+        } else {
+
+            scientificText =
+                "Scientific knowledge was not returned as text.";
+
+        }
+
+
+        /* ========================================================
+           INTEGRATED TEXT
+        ======================================================== */
+
+        let integratedText = "";
+
+        if (
+            typeof integratedAnalysis === "string"
+        ) {
+
+            integratedText =
+                escapeResearchHTML(
+                    integratedAnalysis
+                )
+                .replace(/\n/g, "<br>");
+
+        } else if (
+            integratedAnalysis
+        ) {
+
+            integratedText =
+                escapeResearchHTML(
+                    JSON.stringify(
+                        integratedAnalysis,
+                        null,
+                        2
+                    )
+                )
+                .replace(/\n/g, "<br>");
+
+        } else {
+
+            integratedText =
+                "Integrated interpretation was not returned.";
+
+        }
+
+
+        /* ========================================================
+           TEMPERATURE
+        ======================================================== */
+
+        let temperatureHTML =
+            "Not available";
+
+
+        if (
+            predictedTemperature !== null &&
+            predictedTemperature !== undefined &&
+            !Number.isNaN(
+                Number(predictedTemperature)
+            )
+        ) {
+
+            temperatureHTML =
+                `${Number(predictedTemperature).toFixed(2)} °C`;
+
+        }
+
+
+        /* ========================================================
+           SOURCE
+        ======================================================== */
+
+        answerSource.textContent =
+            "AI AGENT • ANALYTICAL WORKFLOW";
+
+
+        /* ========================================================
+           FINAL ANALYTICAL RESULT
+        ======================================================== */
+
+        answerText.innerHTML = `
+
+            <div style="
+                margin-bottom: 18px;
+            ">
+
+                <div style="
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: #2563eb;
+                    margin-bottom: 8px;
+                ">
+                    Scientific Knowledge
+                </div>
+
+                <div style="
+                    background: #ffffff;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 12px;
+                    padding: 16px;
+                    line-height: 1.7;
+                    color: #334155;
+                    font-size: 14px;
+                ">
+
+                    ${scientificText}
+
+                </div>
+
+            </div>
+
+
+            <div style="
+                display: grid;
+                grid-template-columns:
+                    repeat(auto-fit, minmax(180px, 1fr));
+                gap: 12px;
+                margin-bottom: 18px;
+            ">
+
+                <div style="
+                    background: #f8fafc;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 12px;
+                    padding: 15px;
+                ">
+
+                    <div style="
+                        font-size: 12px;
+                        color: #64748b;
+                        margin-bottom: 6px;
+                    ">
+                        Predicted Temperature
+                    </div>
+
+                    <div style="
+                        font-size: 26px;
+                        font-weight: 800;
+                        color: #2563eb;
+                    ">
+                        ${temperatureHTML}
+                    </div>
+
+                </div>
+
+
+                <div style="
+                    background: #f8fafc;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 12px;
+                    padding: 15px;
+                ">
+
+                    <div style="
+                        font-size: 12px;
+                        color: #64748b;
+                        margin-bottom: 6px;
+                    ">
+                        Prediction Model
+                    </div>
+
+                    <div style="
+                        font-size: 15px;
+                        font-weight: 700;
+                        color: #334155;
+                    ">
+                        ${escapeResearchHTML(modelName)}
+                    </div>
+
+                </div>
+
+
+                <div style="
+                    background: #f8fafc;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 12px;
+                    padding: 15px;
+                ">
+
+                    <div style="
+                        font-size: 12px;
+                        color: #64748b;
+                        margin-bottom: 6px;
+                    ">
+                        Satellite Classification
+                    </div>
+
+                    <div style="
+                        font-size: 18px;
+                        font-weight: 800;
+                        color: #334155;
+                    ">
+                        ${escapeResearchHTML(
+                            satelliteClassification
+                        )}
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div style="
+                margin-bottom: 10px;
+            ">
+
+                <div style="
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: #2563eb;
+                    margin-bottom: 8px;
+                ">
+                    Integrated Interpretation
+                </div>
+
+                <div style="
+                    background: #f8fafc;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 12px;
+                    padding: 16px;
+                    line-height: 1.7;
+                    color: #334155;
+                    font-size: 14px;
+                ">
+
+                    ${integratedText}
+
+                </div>
+
+            </div>
+
+
+            <div style="
+                margin-top: 14px;
+                padding: 10px 12px;
+                background: #eff6ff;
+                border-radius: 8px;
+                color: #475569;
+                font-size: 12px;
+            ">
+
+                Scientific knowledge + MCP weather prediction
+                + satellite analysis + integrated interpretation
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* ============================================================
+       MAIN RESEARCH FUNCTION
+    ============================================================ */
+
+    async function askResearchAssistant() {
+
+        const input =
+            getResearchElement("researchQuery");
+
+
+        hideResearchError();
+
+
+        if (!input) {
+            return;
+        }
+
+
+        const query =
+            input.value.trim();
+
+
+        if (!query) {
+
+            showResearchError(
+                "Please enter a weather research question."
+            );
+
+            input.focus();
+
+            return;
+
+        }
+
+
+        setResearchLoading(true);
+
+
+        try {
+
+            /* ====================================================
+               ANALYTICAL WORKFLOW
+            ==================================================== */
+
+            if (
+                isAnalyticalQuery(query)
+            ) {
+
+                console.log(
+                    "Analytical query detected."
+                );
+
+
+                const values =
+                    getResearchPredictionValues();
+
+
+                if (!values) {
+                    return;
+                }
+
+
+                console.log(
+                    "Using analytical endpoint:",
+                    ANALYTICAL_ENDPOINT
+                );
+
+
+                const response =
+                    await fetch(
+                        ANALYTICAL_ENDPOINT,
+                        {
+
+                            method: "POST",
+
+                            headers: {
+
+                                "Content-Type":
+                                    "application/json",
+
+                                "Accept":
+                                    "application/json"
+
+                            },
+
+                            body: JSON.stringify({
+
+                                question:
+                                    query,
+
+                                values:
+                                    values
+
+                            })
+
+                        }
+                    );
+
+
+                let data;
+
+
+                try {
+
+                    data =
+                        await response.json();
+
+                } catch {
+
+                    throw new Error(
+                        "The Weather AI server returned an invalid analytical response."
+                    );
+
+                }
+
+
+                if (!response.ok) {
+
+                    let message =
+                        "Analytical weather request failed.";
+
+
+                    if (
+                        data &&
+                        data.detail
+                    ) {
+
+                        if (
+                            typeof data.detail === "string"
+                        ) {
+
+                            message =
+                                data.detail;
+
+                        } else {
+
+                            message =
+                                data.detail.message ||
+                                JSON.stringify(data.detail);
+
+                        }
+
+                    }
+
+
+                    throw new Error(message);
+
+                }
+
+
+                if (
+                    !data ||
+                    !data.result
+                ) {
+
+                    throw new Error(
+                        "The Weather AI server did not return an analytical result."
+                    );
+
+                }
+
+
+                showAnalyticalResult(data);
+
+
+                console.log(
+                    "Analytical weather workflow successful:",
+                    data
+                );
+
+
+                return;
+
+            }
+
+
+            /* ====================================================
+               NORMAL RESEARCH WORKFLOW
+            ==================================================== */
+
+            console.log(
+                "Normal research query detected."
+            );
+
+
+            console.log(
+                "Using research endpoint:",
+                RESEARCH_ENDPOINT
+            );
+
+
+            const response =
+                await fetch(
+                    RESEARCH_ENDPOINT,
+                    {
+
+                        method: "POST",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json",
+
+                            "Accept":
+                                "application/json"
+
+                        },
+
+                        body: JSON.stringify({
+
+                            question:
+                                query,
+
+                            values:
+                                null
+
+                        })
+
+                    }
+                );
+
+
+            let data;
+
+
+            try {
+
+                data =
+                    await response.json();
+
+            } catch {
+
+                throw new Error(
+                    "The Weather AI server returned an invalid response."
+                );
+
+            }
+
+
+            if (!response.ok) {
+
+                let message =
+                    "Research request failed.";
+
+
+                if (
+                    data &&
+                    data.detail
+                ) {
+
+                    if (
+                        typeof data.detail === "string"
+                    ) {
+
+                        message =
+                            data.detail;
+
+                    } else {
+
+                        message =
+                            data.detail.message ||
+                            JSON.stringify(data.detail);
+
+                    }
+
+                }
+
+
+                throw new Error(message);
+
+            }
+
+
+            if (
+                !data ||
+                !data.result
+            ) {
+
+                throw new Error(
+                    "The Weather AI server did not return a research result."
+                );
+
+            }
+
+
+            showNormalResearchResult(
+                data.result
+            );
+
+
+            console.log(
+                "Weather research successful:",
+                data
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "Weather Research Assistant Error:",
+                error
+            );
+
+
+            showResearchError(
+                error.message ||
+                "Unable to complete the research request."
+            );
+
+        } finally {
+
+            setResearchLoading(false);
+
+        }
+
+    }
+
+
+    /* ============================================================
+       PREDICTION FROM RESEARCH ASSISTANT
+    ============================================================ */
+
+    async function predictFromResearchAssistant() {
+
+        const button =
+            getResearchElement("predictionButton");
+
+
+        hideResearchError();
+
+
+        const values =
+            getResearchPredictionValues();
+
+
+        if (!values) {
+            return;
+        }
+
+
+        if (button) {
+
+            button.disabled = true;
+
+            button.innerHTML = `
+                <span>⏳</span>
+                <span>Predicting...</span>
+            `;
+
+        }
+
+
+        try {
+
+            const response =
+                await fetch(
+                    RESEARCH_ENDPOINT,
+                    {
+
+                        method: "POST",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json",
+
+                            "Accept":
+                                "application/json"
+
+                        },
+
+                        body: JSON.stringify({
+
+                            question:
+                                "predict temperature",
+
+                            values:
+                                values
+
+                        })
+
+                    }
+                );
+
+
+            let data;
+
+
+            try {
+
+                data =
+                    await response.json();
+
+            } catch {
+
+                throw new Error(
+                    "The Weather AI server returned an invalid response."
+                );
+
+            }
+
+
+            if (!response.ok) {
+
+                let message =
+                    "Temperature prediction failed.";
+
+
+                if (
+                    data &&
+                    data.detail
+                ) {
+
+                    message =
+                        typeof data.detail === "string"
+                            ? data.detail
+                            : JSON.stringify(data.detail);
+
+                }
+
+
+                throw new Error(message);
+
+            }
+
+
+            if (
+                !data ||
+                !data.result
+            ) {
+
+                throw new Error(
+                    "The Weather AI server did not return a prediction."
+                );
+
+            }
+
+
+            const result =
+                data.result;
+
+
+            if (
+                result.route !== "prediction"
+            ) {
+
+                throw new Error(
+                    "The Weather AI agent did not select the prediction route."
+                );
+
+            }
+
+
+            const predictionAnswer =
+                result.answer;
+
+
+            if (
+                !predictionAnswer ||
+                !predictionAnswer.prediction
+            ) {
+
+                throw new Error(
+                    "The prediction result was not returned correctly."
+                );
+
+            }
+
+
+            const prediction =
+                predictionAnswer.prediction;
+
+
+            const temperature =
+                prediction.predicted_temperature_celsius;
+
+
+            if (
+                temperature === undefined ||
+                temperature === null
+            ) {
+
+                throw new Error(
+                    "The predicted temperature was not returned."
+                );
+
+            }
+
+
+            const predictionResult =
+                getResearchElement(
+                    "predictionResult"
+                );
+
+
+            const predictionValue =
+                getResearchElement(
+                    "predictionValue"
+                );
+
+
+            const predictionModel =
+                getResearchElement(
+                    "predictionModel"
+                );
+
+
+            if (predictionValue) {
+
+                predictionValue.textContent =
+                    `${Number(temperature).toFixed(2)} °C`;
+
+            }
+
+
+            if (predictionModel) {
+
+                const model =
+                    predictionAnswer.model &&
+                    predictionAnswer.model.model_name
+                        ? predictionAnswer.model.model_name
+                        : "RandomForestRegressor";
+
+
+                predictionModel.textContent =
+                    `Model: ${model} • MCP Weather Prediction Tool`;
+
+            }
+
+
+            if (predictionResult) {
+
+                predictionResult.style.display =
+                    "block";
+
+            }
+
+
+            console.log(
+                "Weather prediction successful:",
+                data
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "Weather Prediction Error:",
+                error
+            );
+
+
+            showResearchError(
+                error.message ||
+                "Unable to complete the temperature prediction."
+            );
+
+        } finally {
+
+            if (button) {
+
+                button.disabled = false;
+
+                button.innerHTML = `
+                    <span>🌡️</span>
+                    <span>Predict Temperature</span>
+                    <span>→</span>
+                `;
+
+            }
+
+        }
+
+    }
+
+
+    /* ============================================================
+       ENTER KEY SUPPORT
+    ============================================================ */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Enter" &&
+                event.target.id === "researchQuery" &&
+                !event.shiftKey
+            ) {
+
+                event.preventDefault();
+
+                askResearchAssistant();
+
+            }
+
+        }
+    );
+
+
+    /* ============================================================
+       INITIALIZATION
+    ============================================================ */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            console.log(
+                "Weather Research Assistant initialized."
+            );
+
+            console.log(
+                "Research endpoint:",
+                RESEARCH_ENDPOINT
+            );
+
+            console.log(
+                "Analytical endpoint:",
+                ANALYTICAL_ENDPOINT
+            );
+
+        }
+    );
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+WEATHER INTELLIGENCE AI
+FINAL MODEL EVALUATION
+======================
+
+Model: RandomForestRegressor
+
+Evaluation Metrics
+------------------
+
+MAE      : 1.2434
+MSE      : 3.0012
+RMSE     : 1.7324
+R2 Score : 0.9673
+
+
+Interpretation
+--------------
+
+MAE:
+Measures the average absolute difference between the actual
+and predicted temperature values.
+
+MSE:
+Measures the average squared prediction error and gives more
+weight to larger errors.
+
+RMSE:
+Represents the typical prediction error in the same unit as
+the target temperature (°C).
+
+R2 Score:
+Measures how well the model explains the variation in the
+target temperature.

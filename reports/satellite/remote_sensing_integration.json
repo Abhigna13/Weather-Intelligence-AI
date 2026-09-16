@@ -1,0 +1,14 @@
+{
+    "system": "Weather Intelligence AI Remote-Sensing Integration",
+    "satellite_image": "satellite/images/real_satellite.jpg",
+    "computer_vision": {
+        "model": "CNN Satellite Clear vs Cloudy Classifier",
+        "predicted_class": "clear",
+        "confidence_percent": 70.04
+    },
+    "weather_intelligence": {
+        "remote_sensing_source": "Satellite imagery",
+        "weather_variable_supported": "Cloud conditions"
+    },
+    "interpretation": "Satellite imagery indicates relatively clear conditions. The observation can support weather monitoring and decision-support analysis."
+}

@@ -1,0 +1,19 @@
+Dataset size: 96,453 records
+
+Features: 12
+
+Target variable:
+
+Temperature (C)
+
+Missing values:
+
+Precip Type: 517
+
+Best-performing model:
+
+Random Forest
+
+MAE:
+
+0.012720928825752554

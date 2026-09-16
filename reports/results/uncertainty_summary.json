@@ -1,0 +1,11 @@
+{
+    "analysis": "Random Forest ensemble uncertainty",
+    "model": "RandomForestRegressor",
+    "number_of_trees": 100,
+    "samples_analyzed": 50,
+    "mean_predicted_temperature_c": 17.200000000000003,
+    "mean_uncertainty_std_c": 4.521866281009272e-16,
+    "mean_90_percent_interval_width_c": 0.0,
+    "minimum_uncertainty_std_c": 0.0,
+    "maximum_uncertainty_std_c": 5.02429586778808e-16
+}

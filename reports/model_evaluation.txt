@@ -1,0 +1,17 @@
+Weather Intelligence AI - Model Evaluation
+
+Linear Regression
+
+MAE: 0.7435369102972
+
+Decision Tree
+
+MAE: 0.022790855773332987
+
+Random Forest
+
+MAE: 0.012720928825752554
+
+Best Model: Random Forest
+
+R² Score: 0.9901357002524508

@@ -1,0 +1,27 @@
+Weather Intelligence AI
+
+Project Title:
+Weather Intelligence AI
+
+Problem:
+Predict temperature using weather parameters.
+
+Dataset:
+96,453 weather records.
+
+Machine Learning Models:
+1. Linear Regression
+2. Decision Tree
+3. Random Forest
+
+Best Model:
+Random Forest
+
+Backend:
+FastAPI
+
+Frontend:
+HTML, CSS, JavaScript
+
+Result:
+Accurate temperature prediction through an interactive web application.

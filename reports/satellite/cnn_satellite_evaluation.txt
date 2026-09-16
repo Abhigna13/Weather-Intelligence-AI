@@ -1,0 +1,8 @@
+Satellite CNN Classification Evaluation
+----------------------------------------
+Task: Clear vs Cloudy satellite image classification
+Model: Convolutional Neural Network (CNN)
+Image Size: (128, 128)
+Epochs: 10
+Validation Loss: 0.6937
+Validation Accuracy: 50.00%

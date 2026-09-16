@@ -1,0 +1,98 @@
+[
+    {
+        "id": "LIT-001",
+        "title": "Machine Learning for Weather and Climate Prediction",
+        "domain": "Machine Learning",
+        "keywords": [
+            "machine learning",
+            "weather prediction",
+            "climate prediction",
+            "forecasting"
+        ],
+        "summary": "Machine learning methods can learn nonlinear relationships between meteorological variables and weather outcomes. Tree-based ensemble models are particularly useful for structured meteorological datasets."
+    },
+    {
+        "id": "LIT-002",
+        "title": "Deep Learning for Weather Forecasting",
+        "domain": "Deep Learning",
+        "keywords": [
+            "deep learning",
+            "LSTM",
+            "GRU",
+            "weather forecasting"
+        ],
+        "summary": "Deep learning models can represent complex temporal relationships in meteorological observations. Recurrent architectures such as LSTM and GRU can be applied to sequential weather data."
+    },
+    {
+        "id": "LIT-003",
+        "title": "Time-Series Forecasting for Meteorological Data",
+        "domain": "Time-Series Forecasting",
+        "keywords": [
+            "ARIMA",
+            "SARIMA",
+            "time series",
+            "temperature forecasting"
+        ],
+        "summary": "Statistical time-series models such as ARIMA and SARIMA can represent temporal dependencies and seasonal patterns in meteorological variables."
+    },
+    {
+        "id": "LIT-004",
+        "title": "Remote Sensing and Satellite-Based Weather Analysis",
+        "domain": "Remote Sensing",
+        "keywords": [
+            "remote sensing",
+            "satellite",
+            "cloud detection",
+            "computer vision"
+        ],
+        "summary": "Satellite imagery provides spatial information that can complement ground-based meteorological observations. Computer vision techniques can classify cloud-related conditions from satellite images."
+    },
+    {
+        "id": "LIT-005",
+        "title": "Explainable Artificial Intelligence for Weather Prediction",
+        "domain": "Explainable AI",
+        "keywords": [
+            "XAI",
+            "SHAP",
+            "explainability",
+            "weather prediction"
+        ],
+        "summary": "Explainable AI methods help identify how input variables contribute to machine learning predictions. SHAP provides feature-level contribution values for model interpretation."
+    },
+    {
+        "id": "LIT-006",
+        "title": "Retrieval-Augmented Generation for Scientific Knowledge",
+        "domain": "Generative AI",
+        "keywords": [
+            "RAG",
+            "retrieval augmented generation",
+            "LLM",
+            "scientific knowledge"
+        ],
+        "summary": "Retrieval-Augmented Generation combines document retrieval with language generation. Relevant scientific information can be retrieved before an LLM generates a grounded response."
+    },
+    {
+        "id": "LIT-007",
+        "title": "Large Language Models for Scientific Research Assistance",
+        "domain": "Large Language Models",
+        "keywords": [
+            "LLM",
+            "large language models",
+            "research assistant",
+            "scientific research"
+        ],
+        "summary": "Large language models can support scientific research through question answering, summarization, information retrieval and structured research workflows."
+    },
+    {
+        "id": "LIT-008",
+        "title": "AI Agents for Analytical Weather Workflows",
+        "domain": "AI Agents",
+        "keywords": [
+            "AI agents",
+            "tool calling",
+            "weather analytics",
+            "workflow"
+        ],
+        "summary": "AI agents can coordinate multiple tools and analytical operations. Tool-based workflows allow an agent to route questions to appropriate prediction, retrieval or analysis components."
+    }
+]

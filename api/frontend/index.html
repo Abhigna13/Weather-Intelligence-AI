@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Weather Intelligence AI - AI-powered temperature prediction system">
+
+    <meta name="theme-color" content="#f7fbff">
+
+    <title>Weather Intelligence AI</title>
+
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND EFFECTS
+    ====================================================== -->
+
+    <div class="background-effects">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+
+    <!-- =====================================================
+         MAIN APPLICATION
+    ====================================================== -->
+
+    <div class="container">
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="hero-header">
+
+            <div class="brand-section">
+
+                <div class="logo-wrapper">
+                    <div class="logo">🌤️</div>
+                </div>
+
+                <div class="brand-content">
+
+                    <div class="eyebrow">
+                        <span class="status-dot"></span>
+                        AI WEATHER INTELLIGENCE
+                    </div>
+
+                    <h1>
+                        Weather Intelligence
+                        <span>AI</span>
+                    </h1>
+
+                    <p>
+                        Intelligent temperature prediction powered by
+                        machine learning and real-time weather parameters.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+                        <div class="system-status"> 
+
+                <span class="status-indicator"></span> 
+
+                <div> 
+                    <small>AI ENGINE</small> 
+                    <strong>ONLINE</strong> 
+                </div> 
+
+            </div>
+
+
+            <a href="/model-performance-page" class="page-navigation">
+
+    <span class="page-navigation-icon">
+        📊
+    </span>
+
+    <span class="page-navigation-content">
+        <small>NAVIGATE TO</small>
+        <strong>Model Performance</strong>
+    </span>
+
+    <span class="page-navigation-arrow">
+        →
+    </span>
+
+</a>
+
+        </header>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main>
+
+            <!-- =================================================
+                 INTRODUCTION
+            ================================================== -->
+
+            <section class="intro-section">
+
+                <div>
+
+                    <span class="section-label">
+                        PREDICTION ENGINE
+                    </span>
+
+                    <h2>
+                        Predict the atmosphere.
+                        <span>Understand the temperature.</span>
+                    </h2>
+
+                    <p>
+                        Configure the weather parameters below and let the
+                        trained AI model estimate the expected temperature.
+                    </p>
+
+                </div>
+
+                <div class="model-badge">
+
+                    <span class="model-icon">⚡</span>
+
+                    <div>
+                        <small>MODEL</small>
+                        <strong>Random Forest</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PREDICTION CARD
+            ================================================== -->
+
+            <section class="card prediction-card">
+
+                <div class="card-header">
+
+                    <div class="card-title">
+
+                        <div class="card-icon">
+                            🌡️
+                        </div>
+
+                        <div>
+                            <h3>Weather Parameters</h3>
+
+                            <p>
+                                Enter the atmospheric conditions used by
+                                the AI prediction model.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="parameter-count">
+                        <strong>13</strong>
+                        <span>PARAMETERS</span>
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     FORM
+                ================================================== -->
+
+                <div class="form-grid">
+
+                    <!-- Summary -->
+
+                    <div class="input-group">
+
+                        <label for="summary">
+                            <span>01</span>
+                            Summary
+                        </label>
+
+                        <input
+                            type="number"
+                            id="summary"
+                            value="19"
+                            placeholder="Enter summary value"
+                        >
+
+                    </div>
+
+
+                    <!-- Precipitation -->
+
+                    <div class="input-group">
+
+                        <label for="precip_type">
+                            <span>02</span>
+                            Precipitation Type
+                        </label>
+
+                        <input
+                            type="number"
+                            id="precip_type"
+                            value="0"
+                            placeholder="Enter precipitation value"
+                        >
+
+                    </div>
+
+
+                    <!-- Apparent Temperature -->
+
+                    <div class="input-group">
+
+                        <label for="apparent_temperature">
+                            <span>03</span>
+                            Apparent Temperature
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="apparent_temperature"
+                                value="10"
+                                placeholder="Temperature"
+                            >
+
+                            <span>°C</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Humidity -->
+
+                    <div class="input-group">
+
+                        <label for="humidity">
+                            <span>04</span>
+                            Humidity
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="humidity"
+                                value="0.70"
+                                step="0.01"
+                                min="0"
+                                max="1"
+                                placeholder="0.00 - 1.00"
+                            >
+
+                            <span>RH</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Wind Speed -->
+
+                    <div class="input-group">
+
+                        <label for="wind_speed">
+                            <span>05</span>
+                            Wind Speed
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="wind_speed"
+                                value="10"
+                                min="0"
+                                placeholder="Wind speed"
+                            >
+
+                            <span>km/h</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Wind Bearing -->
+
+                    <div class="input-group">
+
+                        <label for="wind_bearing">
+                            <span>06</span>
+                            Wind Bearing
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="wind_bearing"
+                                value="180"
+                                min="0"
+                                max="360"
+                                placeholder="0 - 360"
+                            >
+
+                            <span>°</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Visibility -->
+
+                    <div class="input-group">
+
+                        <label for="visibility">
+                            <span>07</span>
+                            Visibility
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="visibility"
+                                value="10"
+                                min="0"
+                                placeholder="Visibility"
+                            >
+
+                            <span>km</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Cloud Cover -->
+
+                    <div class="input-group">
+
+                        <label for="cloud_cover">
+                            <span>08</span>
+                            Cloud Cover
+                        </label>
+
+                        <input
+                            type="number"
+                            id="cloud_cover"
+                            value="0"
+                            placeholder="Cloud cover"
+                        >
+
+                    </div>
+
+
+                    <!-- Pressure -->
+
+                    <div class="input-group">
+
+                        <label for="pressure">
+                            <span>09</span>
+                            Atmospheric Pressure
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="pressure"
+                                value="1015"
+                                min="0"
+                                placeholder="Pressure"
+                            >
+
+                            <span>mb</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Daily Summary -->
+
+                    <div class="input-group">
+
+                        <label for="daily_summary">
+                            <span>10</span>
+                            Daily Summary
+                        </label>
+
+                        <input
+                            type="number"
+                            id="daily_summary"
+                            value="197"
+                            placeholder="Daily summary"
+                        >
+
+                    </div>
+
+
+                    <!-- Year -->
+
+                    <div class="input-group">
+
+                        <label for="year">
+                            <span>11</span>
+                            Year
+                        </label>
+
+                        <input
+                            type="number"
+                            id="year"
+                            value="2026"
+                            min="1900"
+                            max="2100"
+                            placeholder="Year"
+                        >
+
+                    </div>
+
+
+                    <!-- Month -->
+
+                    <div class="input-group">
+
+                        <label for="month">
+                            <span>12</span>
+                            Month
+                        </label>
+
+                        <input
+                            type="number"
+                            id="month"
+                            value="8"
+                            min="1"
+                            max="12"
+                            placeholder="1 - 12"
+                        >
+
+                    </div>
+
+
+                    <!-- Day -->
+
+                    <div class="input-group">
+
+                        <label for="day">
+                            <span>13</span>
+                            Day
+                        </label>
+
+                        <input
+                            type="number"
+                            id="day"
+                            value="17"
+                            min="1"
+                            max="31"
+                            placeholder="1 - 31"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ACTION AREA
+                ================================================== -->
+
+                <div class="action-area">
+
+                    <div class="action-info">
+
+                        <span class="action-icon">
+                            ✨
+                        </span>
+
+                        <div>
+                            <strong>Ready for prediction</strong>
+
+                            <small>
+                                AI will analyze all 13 parameters
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        id="predictButton"
+                        onclick="predictTemperature()"
+                    >
+
+                        <span class="button-icon">🔮</span>
+
+                        <span>
+                            Predict Temperature
+                        </span>
+
+                        <span class="button-arrow">→</span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     LOADING STATE
+                ================================================== -->
+
+                <div id="loading" class="loading-state">
+
+                    <div class="loader"></div>
+
+                    <div>
+                        <strong>AI is analyzing weather conditions...</strong>
+
+                        <span>
+                            Running prediction through the trained model
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RESULT
+                ================================================== -->
+
+                <div id="result" class="result-card">
+
+                    <div class="result-icon">
+                        🌡️
+                    </div>
+
+                    <div class="result-content">
+
+                        <span class="result-label">
+                            AI PREDICTED TEMPERATURE
+                        </span>
+
+                        <strong id="temperature">
+                            -- °C
+                        </strong>
+
+                        <p>
+                            Prediction generated by the Weather Intelligence
+                            AI engine.
+                        </p>
+
+                    </div>
+
+                    <div class="result-decoration">
+                        AI
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 INFORMATION CARDS
+            ================================================== -->
+
+            <section class="insight-grid">
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+                        🤖
+                    </div>
+
+                    <div>
+                        <span>AI MODEL</span>
+                        <strong>Random Forest</strong>
+                        <p>
+                            Machine learning model trained for
+                            temperature prediction.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+                        📊
+                    </div>
+
+                    <div>
+                        <span>INPUT ANALYSIS</span>
+                        <strong>13 Parameters</strong>
+                        <p>
+                            Multiple atmospheric variables are
+                            processed before prediction.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+                        ⚡
+                    </div>
+
+                    <div>
+                        <span>API ENGINE</span>
+                        <strong>FastAPI</strong>
+                        <p>
+                            Fast and structured backend communication
+                            powers the application.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            <div class="footer-brand">
+                <span>🌤️</span>
+                <strong>Weather Intelligence AI</strong>
+            </div>
+
+            <p>
+                AI-powered temperature prediction system
+            </p>
+
+            <div class="footer-tech">
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>FastAPI</span>
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="/frontend/script.js"></script>
+
+</body>
+
+</html>

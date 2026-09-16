@@ -1,0 +1,2 @@
+Model,MAE,MSE,RMSE,R2 Score
+RandomForestRegressor,1.2434,3.0012,1.7324,0.9673

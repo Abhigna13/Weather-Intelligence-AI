@@ -1,0 +1,117 @@
+[
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "The primary machine learning model used for temperature prediction in this project is RandomForestRegressor."
+        }
+    },
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "Unable to generate an answer using the local LLM."
+        }
+    },
+    {
+        "user_query": "What model did you mention earlier for temperature prediction?",
+        "response": {
+            "success": true,
+            "prediction": {
+                "predicted_temperature_celsius": 18.0
+            },
+            "unit": "°C",
+            "model": {
+                "model_loaded": true,
+                "model_name": "RandomForestRegressor",
+                "features_used": 13
+            }
+        }
+    },
+    {
+        "user_query": "What model did you mention earlier for temperature prediction?",
+        "response": {
+            "answer": "I didn't mention a specific model for temperature prediction earlier. This conversation just started, and we haven't discussed any models or topics related to temperature prediction. If you'd like to discuss temperature prediction or any other topic, I'm here to help!"
+        }
+    },
+    {
+        "user_query": "What model did you mention earlier for temperature prediction?",
+        "response": {
+            "answer": "The model I mentioned earlier for temperature prediction is the RMS error model."
+        }
+    },
+    {
+        "user_query": "What model did you mention earlier for temperature prediction?",
+        "response": {
+            "answer": "The model I mentioned earlier for temperature prediction is the RMS-Error model."
+        }
+    },
+    {
+        "user_query": "What model did you mention earlier for temperature prediction?",
+        "response": {
+            "answer": "The model I mentioned earlier for temperature prediction is the RMS-Error model."
+        }
+    },
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "Unable to generate an answer using the local LLM."
+        }
+    },
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "The machine learning model used for temperature prediction in this project is a Random Forest model."
+        }
+    },
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "Unable to generate an answer using the local LLM."
+        }
+    },
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "Unable to generate an answer using the local LLM."
+        }
+    },
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "The primary machine learning model used for temperature prediction in the deployed Weather Intelligence AI application is RandomForestRegressor.",
+            "source": "Project Knowledge Base",
+            "model": "RandomForestRegressor"
+        }
+    },
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "The primary machine learning model used for temperature prediction in the deployed Weather Intelligence AI application is RandomForestRegressor.",
+            "source": "Project Knowledge Base",
+            "model": "RandomForestRegressor"
+        }
+    },
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "The primary machine learning model used for temperature prediction in the deployed Weather Intelligence AI application is RandomForestRegressor.",
+            "source": "Project Knowledge Base",
+            "model": "RandomForestRegressor"
+        }
+    },
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "The primary machine learning model used for temperature prediction in the deployed Weather Intelligence AI application is RandomForestRegressor.",
+            "source": "Project Knowledge Base",
+            "model": "RandomForestRegressor"
+        }
+    },
+    {
+        "user_query": "Which machine learning model is used for temperature prediction in this project?",
+        "response": {
+            "answer": "The primary machine learning model used for temperature prediction in the deployed Weather Intelligence AI application is RandomForestRegressor.",
+            "source": "Project Knowledge Base",
+            "model": "RandomForestRegressor"
+        }
+    }
+]

@@ -1,0 +1,3244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Weather Intelligence AI prediction history dashboard"
+    >
+
+    <meta
+        name="theme-color"
+        content="#f4f8ff"
+    >
+
+    <title>
+        Weather Intelligence AI | Prediction History
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="/frontend/style.css"
+    >
+
+
+    <style>
+
+        /* ============================================================
+           WEATHER INTELLIGENCE AI
+           PREDICTION HISTORY — PREMIUM 10/10 UI
+           ============================================================ */
+
+
+        /* ============================================================
+           PAGE
+           ============================================================ */
+
+        .history-page {
+
+            position: relative;
+
+            z-index: 2;
+
+            padding:
+                34px
+                0
+                70px;
+
+        }
+
+
+        /* ============================================================
+           HERO HEADER
+           ============================================================ */
+
+        .history-hero {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            margin-bottom: 30px;
+
+            padding:
+                34px
+                36px;
+
+            border-radius: 28px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,0.97),
+                    rgba(246,251,255,0.94)
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,0.95);
+
+            box-shadow:
+                0 25px 70px
+                rgba(30,65,110,0.10),
+
+                inset 0 1px 0
+                rgba(255,255,255,1);
+
+            backdrop-filter:
+                blur(24px);
+
+        }
+
+
+        .history-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 280px;
+
+            height: 280px;
+
+            top: -150px;
+
+            right: 7%;
+
+            border-radius: 50%;
+
+            background:
+                rgba(37,99,235,0.10);
+
+            filter:
+                blur(10px);
+
+            pointer-events: none;
+
+        }
+
+
+        .history-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 190px;
+
+            height: 190px;
+
+            bottom: -130px;
+
+            left: 30%;
+
+            border-radius: 50%;
+
+            background:
+                rgba(6,182,212,0.08);
+
+            filter:
+                blur(8px);
+
+            pointer-events: none;
+
+        }
+
+
+        .history-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 780px;
+
+        }
+
+
+        .history-eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding:
+                7px
+                11px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(37,99,235,0.07);
+
+            border:
+                1px solid
+                rgba(37,99,235,0.10);
+
+            color:
+                #2563eb;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing:
+                1.7px;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .history-eyebrow::before {
+
+            content: "";
+
+            width: 6px;
+
+            height: 6px;
+
+            border-radius: 50%;
+
+            background:
+                #06b6d4;
+
+            box-shadow:
+                0 0 0 4px
+                rgba(6,182,212,0.10);
+
+        }
+
+
+        .history-hero h1 {
+
+            margin:
+                14px
+                0
+                8px;
+
+            color:
+                #0f172a;
+
+            font-size:
+                clamp(30px, 4vw, 46px);
+
+            line-height:
+                1.05;
+
+            letter-spacing:
+                -1.8px;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .history-hero h1 span {
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #2563eb,
+                    #0891b2
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+
+        }
+
+
+        .history-hero-description {
+
+            max-width: 720px;
+
+            color:
+                #64748b;
+
+            font-size: 13px;
+
+            line-height: 1.75;
+
+        }
+
+
+        /* ============================================================
+           NAVIGATION
+           ============================================================ */
+
+        .history-navigation {
+
+            position: relative;
+
+            z-index: 3;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .history-navigation a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 40px;
+
+            padding:
+                0
+                14px;
+
+            border-radius: 11px;
+
+            text-decoration: none;
+
+            color:
+                #475569;
+
+            background:
+                rgba(255,255,255,0.82);
+
+            border:
+                1px solid
+                #e2eaf3;
+
+            font-size: 10px;
+
+            font-weight: 850;
+
+            transition:
+                transform .2s ease,
+                background .2s ease,
+                border-color .2s ease,
+                box-shadow .2s ease,
+                color .2s ease;
+
+        }
+
+
+        .history-navigation a:hover {
+
+            transform:
+                translateY(-2px);
+
+            color:
+                #2563eb;
+
+            background:
+                #ffffff;
+
+            border-color:
+                #cdddf0;
+
+            box-shadow:
+                0 10px 25px
+                rgba(37,99,235,0.10);
+
+        }
+
+
+        .history-navigation a.active {
+
+            color:
+                #ffffff;
+
+            border-color:
+                transparent;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #0891b2
+                );
+
+            box-shadow:
+                0 10px 25px
+                rgba(37,99,235,0.20);
+
+        }
+
+
+        /* ============================================================
+           SECTION LABEL
+           ============================================================ */
+
+        .history-section-label {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color:
+                #64748b;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing:
+                1.5px;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .history-section-label::before {
+
+            content: "";
+
+            width: 18px;
+
+            height: 2px;
+
+            border-radius: 5px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #2563eb,
+                    #06b6d4
+                );
+
+        }
+
+
+        /* ============================================================
+           KPI GRID
+           ============================================================ */
+
+        .history-kpi-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 16px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .history-kpi {
+
+            position: relative;
+
+            min-height: 154px;
+
+            padding:
+                21px;
+
+            border-radius:
+                22px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.98),
+                    rgba(247,251,255,0.90)
+                );
+
+            border:
+                1px solid
+                #e8f0f8;
+
+            box-shadow:
+                0 16px 40px
+                rgba(25,65,105,0.07),
+
+                inset 0 1px 0
+                #ffffff;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease,
+                border-color .25s ease;
+
+        }
+
+
+        .history-kpi:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #d6e5f5;
+
+            box-shadow:
+                0 24px 52px
+                rgba(25,65,105,0.11);
+
+        }
+
+
+        .history-kpi::after {
+
+            content: "";
+
+            position: absolute;
+
+            right: -35px;
+
+            bottom: -45px;
+
+            width: 115px;
+
+            height: 115px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(37,99,235,0.045);
+
+        }
+
+
+        .history-kpi-top {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 10px;
+
+        }
+
+
+        .history-kpi-label {
+
+            color:
+                #94a3b8;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing:
+                1.3px;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .history-kpi-icon {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 34px;
+
+            height: 34px;
+
+            border-radius:
+                10px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(37,99,235,0.10),
+                    rgba(6,182,212,0.10)
+                );
+
+            border:
+                1px solid
+                rgba(37,99,235,0.08);
+
+            font-size:
+                16px;
+
+        }
+
+
+        .history-kpi-value {
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-top:
+                13px;
+
+            color:
+                #172033;
+
+            font-size:
+                clamp(24px, 2.4vw, 32px);
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                -1.2px;
+
+            line-height:
+                1.05;
+
+        }
+
+
+        .history-kpi:first-child
+        .history-kpi-value {
+
+            color:
+                #2563eb;
+
+        }
+
+
+        .history-kpi:nth-child(2)
+        .history-kpi-value {
+
+            color:
+                #0891b2;
+
+        }
+
+
+        .history-kpi:nth-child(3)
+        .history-kpi-value {
+
+            color:
+                #0f766e;
+
+        }
+
+
+        .history-kpi:nth-child(4)
+        .history-kpi-value {
+
+            color:
+                #475569;
+
+            font-size:
+                clamp(18px, 2vw, 25px);
+
+        }
+
+
+        .history-kpi-description {
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-top:
+                8px;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                10px;
+
+            line-height:
+                1.5;
+
+        }
+
+
+        /* ============================================================
+           MAIN CARD
+           ============================================================ */
+
+        .history-main-card {
+
+            position: relative;
+
+            padding:
+                28px;
+
+            margin-bottom:
+                22px;
+
+            border-radius:
+                26px;
+
+            background:
+                rgba(255,255,255,0.90);
+
+            border:
+                1px solid
+                rgba(225,235,245,0.95);
+
+            box-shadow:
+                0 24px 65px
+                rgba(15,55,95,0.08),
+
+                inset 0 1px 0
+                #ffffff;
+
+            backdrop-filter:
+                blur(22px);
+
+        }
+
+
+        .history-main-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding-bottom:
+                21px;
+
+            border-bottom:
+                1px solid
+                #edf2f7;
+
+        }
+
+
+        .history-main-title h2 {
+
+            margin:
+                8px
+                0
+                0;
+
+            color:
+                #172033;
+
+            font-size:
+                21px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                -0.5px;
+
+        }
+
+
+        .history-main-title p {
+
+            margin-top:
+                6px;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.6;
+
+        }
+
+
+        /* ============================================================
+           CLEAR BUTTON
+           ============================================================ */
+
+        .clear-history-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            min-height:
+                42px;
+
+            padding:
+                0
+                16px;
+
+            border:
+                1px solid
+                #dce6f1;
+
+            border-radius:
+                11px;
+
+            background:
+                #ffffff;
+
+            color:
+                #475569;
+
+            font-size:
+                10px;
+
+            font-weight:
+                900;
+
+            cursor:
+                pointer;
+
+            box-shadow:
+                0 8px 20px
+                rgba(15,55,95,0.06);
+
+            transition:
+                transform .2s ease,
+                color .2s ease,
+                border-color .2s ease,
+                background .2s ease,
+                box-shadow .2s ease;
+
+        }
+
+
+        .clear-history-btn:hover {
+
+            transform:
+                translateY(-2px);
+
+            color:
+                #dc2626;
+
+            border-color:
+                #fecaca;
+
+            background:
+                #fffafa;
+
+            box-shadow:
+                0 12px 25px
+                rgba(220,38,38,0.08);
+
+        }
+
+
+        .clear-history-btn:disabled {
+
+            opacity:
+                .55;
+
+            cursor:
+                wait;
+
+            transform:
+                none;
+
+        }
+
+
+        /* ============================================================
+           ERROR
+           ============================================================ */
+
+        .history-error {
+
+            display:
+                none;
+
+            margin-top:
+                18px;
+
+            padding:
+                13px
+                15px;
+
+            border-radius:
+                12px;
+
+            background:
+                #fff7f7;
+
+            border:
+                1px solid
+                #fecaca;
+
+            color:
+                #b91c1c;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.55;
+
+        }
+
+
+        /* ============================================================
+           LOADING
+           ============================================================ */
+
+        .history-loading {
+
+            padding:
+                65px
+                20px;
+
+            text-align:
+                center;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                11px;
+
+        }
+
+
+        .history-spinner {
+
+            position:
+                relative;
+
+            width:
+                38px;
+
+            height:
+                38px;
+
+            margin:
+                0 auto
+                15px;
+
+            border-radius:
+                50%;
+
+            border:
+                3px solid
+                #e6eef7;
+
+            border-top-color:
+                #2563eb;
+
+            border-right-color:
+                #06b6d4;
+
+            animation:
+                historySpin .8s
+                linear
+                infinite;
+
+        }
+
+
+        @keyframes historySpin {
+
+            to {
+
+                transform:
+                    rotate(360deg);
+
+            }
+
+        }
+
+
+        /* ============================================================
+           HISTORY LIST
+           ============================================================ */
+
+        .history-list {
+
+            display:
+                grid;
+
+            gap:
+                14px;
+
+            padding-top:
+                21px;
+
+        }
+
+
+        /* ============================================================
+           HISTORY RECORD
+           ============================================================ */
+
+        .history-item {
+
+            position:
+                relative;
+
+            padding:
+                20px;
+
+            border-radius:
+                19px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f8fbff
+                );
+
+            border:
+                1px solid
+                #e6eef6;
+
+            box-shadow:
+                0 9px 25px
+                rgba(30,70,110,0.045);
+
+            overflow:
+                hidden;
+
+            transition:
+                transform .22s ease,
+                border-color .22s ease,
+                box-shadow .22s ease;
+
+        }
+
+
+        .history-item::before {
+
+            content: "";
+
+            position:
+                absolute;
+
+            left:
+                0;
+
+            top:
+                0;
+
+            bottom:
+                0;
+
+            width:
+                3px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #2563eb,
+                    #06b6d4
+                );
+
+            opacity:
+                .65;
+
+        }
+
+
+        .history-item:hover {
+
+            transform:
+                translateY(-3px);
+
+            border-color:
+                #d3e3f2;
+
+            box-shadow:
+                0 17px 35px
+                rgba(30,70,110,0.085);
+
+        }
+
+
+        /* ============================================================
+           RECORD TOP
+           ============================================================ */
+
+        .history-record-top {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+        .history-record-identity {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            min-width:
+                0;
+
+        }
+
+
+        .history-record-icon {
+
+            flex:
+                0 0 auto;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            width:
+                44px;
+
+            height:
+                44px;
+
+            border-radius:
+                13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(37,99,235,0.11),
+                    rgba(6,182,212,0.12)
+                );
+
+            border:
+                1px solid
+                rgba(37,99,235,0.09);
+
+            font-size:
+                20px;
+
+        }
+
+
+        .history-record-name {
+
+            min-width:
+                0;
+
+        }
+
+
+        .history-record-name strong {
+
+            display:
+                block;
+
+            color:
+                #1e293b;
+
+            font-size:
+                13px;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .history-record-name span {
+
+            display:
+                block;
+
+            margin-top:
+                4px;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                9px;
+
+            white-space:
+                nowrap;
+
+            overflow:
+                hidden;
+
+            text-overflow:
+                ellipsis;
+
+        }
+
+
+        /* ============================================================
+           TEMPERATURE HERO
+           ============================================================ */
+
+        .history-temperature {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                11px;
+
+            flex:
+                0 0 auto;
+
+            padding:
+                8px
+                12px
+                8px
+                8px;
+
+            border-radius:
+                13px;
+
+            background:
+                #f7fbff;
+
+            border:
+                1px solid
+                #e2edf7;
+
+        }
+
+
+        .history-temperature-icon {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            width:
+                31px;
+
+            height:
+                31px;
+
+            border-radius:
+                9px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #06b6d4
+                );
+
+            color:
+                white;
+
+            font-size:
+                14px;
+
+        }
+
+
+        .history-temperature-text {
+
+            text-align:
+                right;
+
+        }
+
+
+        .history-temperature-label {
+
+            color:
+                #94a3b8;
+
+            font-size:
+                7px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                1px;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .history-temperature-value {
+
+            margin-top:
+                2px;
+
+            color:
+                #2563eb;
+
+            font-size:
+                22px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                -0.8px;
+
+            line-height:
+                1;
+
+        }
+
+
+        /* ============================================================
+           DETAIL GRID
+           ============================================================ */
+
+        .history-details {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0,1fr));
+
+            gap:
+                9px;
+
+        }
+
+
+        .history-detail {
+
+            min-width:
+                0;
+
+            padding:
+                12px;
+
+            border-radius:
+                11px;
+
+            background:
+                rgba(247,250,253,0.88);
+
+            border:
+                1px solid
+                #e7eef5;
+
+            transition:
+                background .2s ease,
+                border-color .2s ease;
+
+        }
+
+
+        .history-detail:hover {
+
+            background:
+                #ffffff;
+
+            border-color:
+                #dce8f3;
+
+        }
+
+
+        .history-detail span {
+
+            display:
+                block;
+
+            color:
+                #9aa8b8;
+
+            font-size:
+                7px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                .9px;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        .history-detail strong {
+
+            display:
+                block;
+
+            margin-top:
+                5px;
+
+            color:
+                #334155;
+
+            font-size:
+                10px;
+
+            font-weight:
+                850;
+
+            line-height:
+                1.4;
+
+            word-break:
+                break-word;
+
+        }
+
+
+        /* ============================================================
+           EMPTY STATE
+           ============================================================ */
+
+        .history-empty {
+
+            display:
+                none;
+
+            padding:
+                70px
+                25px;
+
+            margin-top:
+                20px;
+
+            text-align:
+                center;
+
+            border-radius:
+                18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f7fbff
+                );
+
+            border:
+                1px dashed
+                #d5e2ef;
+
+        }
+
+
+        .history-empty-icon {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            width:
+                65px;
+
+            height:
+                65px;
+
+            margin:
+                0 auto
+                16px;
+
+            border-radius:
+                20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(37,99,235,.08),
+                    rgba(6,182,212,.08)
+                );
+
+            font-size:
+                29px;
+
+        }
+
+
+        .history-empty h3 {
+
+            margin:
+                0;
+
+            color:
+                #1e293b;
+
+            font-size:
+                18px;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .history-empty p {
+
+            max-width:
+                520px;
+
+            margin:
+                8px auto 0;
+
+            color:
+                #94a3b8;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        .history-empty a {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            margin-top:
+                18px;
+
+            min-height:
+                40px;
+
+            padding:
+                0
+                17px;
+
+            border-radius:
+                11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #06b6d4
+                );
+
+            color:
+                #ffffff;
+
+            text-decoration:
+                none;
+
+            font-size:
+                10px;
+
+            font-weight:
+                900;
+
+            box-shadow:
+                0 10px 25px
+                rgba(37,99,235,.18);
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
+
+        }
+
+
+        .history-empty a:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 14px 30px
+                rgba(37,99,235,.25);
+
+        }
+
+
+        /* ============================================================
+           AI INSIGHT
+           ============================================================ */
+
+        .history-insight {
+
+            position:
+                relative;
+
+            padding:
+                27px
+                30px;
+
+            border-radius:
+                24px;
+
+            overflow:
+                hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8fbff,
+                    #ffffff
+                );
+
+            border:
+                1px solid
+                #e3edf7;
+
+            box-shadow:
+                0 20px 55px
+                rgba(15,55,95,.07);
+
+        }
+
+
+        .history-insight::after {
+
+            content:
+                "AI";
+
+            position:
+                absolute;
+
+            right:
+                30px;
+
+            top:
+                18px;
+
+            color:
+                rgba(37,99,235,.045);
+
+            font-size:
+                74px;
+
+            font-weight:
+                950;
+
+            line-height:
+                1;
+
+        }
+
+
+        .history-insight h3 {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            margin:
+                9px
+                0
+                0;
+
+            color:
+                #172033;
+
+            font-size:
+                18px;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .history-insight p {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                930px;
+
+            margin:
+                8px
+                0
+                0;
+
+            color:
+                #64748b;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.75;
+
+        }
+
+
+        /* ============================================================
+           FOCUS
+           ============================================================ */
+
+        .history-navigation a:focus-visible,
+        .clear-history-btn:focus-visible,
+        .history-empty a:focus-visible {
+
+            outline:
+                3px solid
+                rgba(37,99,235,.20);
+
+            outline-offset:
+                3px;
+
+        }
+
+
+        /* ============================================================
+           RESPONSIVE — 1100
+           ============================================================ */
+
+        @media (max-width: 1100px) {
+
+            .history-kpi-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+
+            }
+
+
+            .history-details {
+
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+
+            }
+
+
+            .history-hero {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .history-navigation {
+
+                justify-content:
+                    flex-start;
+
+            }
+
+        }
+
+
+        /* ============================================================
+           RESPONSIVE — 760
+           ============================================================ */
+
+        @media (max-width: 760px) {
+
+            .history-page {
+
+                padding-top:
+                    20px;
+
+            }
+
+
+            .history-hero {
+
+                padding:
+                    26px
+                    22px;
+
+                border-radius:
+                    22px;
+
+            }
+
+
+            .history-hero h1 {
+
+                font-size:
+                    32px;
+
+            }
+
+
+            .history-main-card {
+
+                padding:
+                    21px;
+
+                border-radius:
+                    21px;
+
+            }
+
+
+            .history-main-header {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .clear-history-btn {
+
+                width:
+                    100%;
+
+            }
+
+
+            .history-record-top {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .history-temperature {
+
+                width:
+                    100%;
+
+                justify-content:
+                    flex-start;
+
+            }
+
+
+            .history-temperature-text {
+
+                text-align:
+                    left;
+
+            }
+
+        }
+
+
+        /* ============================================================
+           RESPONSIVE — 520
+           ============================================================ */
+
+        @media (max-width: 520px) {
+
+            .history-page {
+
+                padding:
+                    14px
+                    12px
+                    50px;
+
+            }
+
+
+            .history-kpi-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .history-details {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .history-navigation {
+
+                width:
+                    100%;
+
+            }
+
+
+            .history-navigation a {
+
+                flex:
+                    1 1 auto;
+
+            }
+
+
+            .history-insight {
+
+                padding:
+                    23px;
+
+            }
+
+
+            .history-item {
+
+                padding:
+                    17px;
+
+            }
+
+        }
+
+
+        /* ============================================================
+           RESPONSIVE — 380
+           ============================================================ */
+
+        @media (max-width: 380px) {
+
+            .history-details {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .history-hero h1 {
+
+                font-size:
+                    28px;
+
+            }
+
+
+            .history-hero-description {
+
+                font-size:
+                    12px;
+
+            }
+
+        }
+
+
+        /* ============================================================
+           REDUCED MOTION
+           ============================================================ */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                scroll-behavior:
+                    auto !important;
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================================================
+         BACKGROUND
+         ============================================================ -->
+
+    <div class="background-effects">
+
+        <div class="glow glow-one"></div>
+
+        <div class="glow glow-two"></div>
+
+        <div class="grid-overlay"></div>
+
+    </div>
+
+
+    <!-- ============================================================
+         MAIN
+         ============================================================ -->
+
+    <main class="container history-page">
+
+
+        <!-- ========================================================
+             HERO
+             ======================================================== -->
+
+        <section class="history-hero">
+
+
+            <div class="history-hero-content">
+
+                <span class="history-eyebrow">
+                    PREDICTION HISTORY
+                </span>
+
+
+                <h1>
+                    AI Prediction
+                    <span>History</span>
+                </h1>
+
+
+                <p class="history-hero-description">
+
+                    Explore every temperature prediction generated
+                    by Weather Intelligence AI, including historical
+                    weather conditions, model inputs and prediction
+                    activity.
+
+                </p>
+
+            </div>
+
+
+            <!-- ====================================================
+                 NAVIGATION
+                 ==================================================== -->
+
+            <a href="/analytics" class="page-navigation">
+
+    <span class="page-navigation-icon">
+      📈
+    </span>
+
+    <span class="page-navigation-content">
+        <small>NAVIGATE TO</small>
+        <strong>Analytics</strong>
+    </span>
+
+    <span class="page-navigation-arrow">
+        →
+    </span>
+
+</a>
+
+
+        </section>
+
+
+        <!-- ========================================================
+             KPI SUMMARY
+             ======================================================== -->
+
+        <section
+            class="history-kpi-grid"
+            aria-label="Prediction summary"
+        >
+
+
+            <!-- TOTAL -->
+
+            <article class="history-kpi">
+
+                <div class="history-kpi-top">
+
+                    <span class="history-kpi-label">
+                        Total Predictions
+                    </span>
+
+                    <div class="history-kpi-icon">
+                        📊
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="history-kpi-value"
+                    id="totalPredictions"
+                >
+                    0
+                </div>
+
+
+                <p class="history-kpi-description">
+                    Predictions recorded by the AI system.
+                </p>
+
+            </article>
+
+
+            <!-- LATEST -->
+
+            <article class="history-kpi">
+
+                <div class="history-kpi-top">
+
+                    <span class="history-kpi-label">
+                        Latest Prediction
+                    </span>
+
+                    <div class="history-kpi-icon">
+                        🌡️
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="history-kpi-value"
+                    id="latestPrediction"
+                >
+                    --
+                </div>
+
+
+                <p class="history-kpi-description">
+                    Most recent predicted temperature.
+                </p>
+
+            </article>
+
+
+            <!-- AVERAGE -->
+
+            <article class="history-kpi">
+
+                <div class="history-kpi-top">
+
+                    <span class="history-kpi-label">
+                        Average Temperature
+                    </span>
+
+                    <div class="history-kpi-icon">
+                        📈
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="history-kpi-value"
+                    id="averagePrediction"
+                >
+                    --
+                </div>
+
+
+                <p class="history-kpi-description">
+                    Mean temperature across all records.
+                </p>
+
+            </article>
+
+
+            <!-- RANGE -->
+
+            <article class="history-kpi">
+
+                <div class="history-kpi-top">
+
+                    <span class="history-kpi-label">
+                        Prediction Range
+                    </span>
+
+                    <div class="history-kpi-icon">
+                        ↕️
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="history-kpi-value"
+                    id="predictionRange"
+                >
+                    --
+                </div>
+
+
+                <p class="history-kpi-description">
+                    Lowest to highest predicted temperature.
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- ========================================================
+             MAIN HISTORY
+             ======================================================== -->
+
+        <section class="history-main-card">
+
+
+            <!-- HEADER -->
+
+            <div class="history-main-header">
+
+
+                <div class="history-main-title">
+
+                    <span class="history-section-label">
+                        RECENT PREDICTIONS
+                    </span>
+
+
+                    <h2>
+                        Prediction Records
+                    </h2>
+
+
+                    <p>
+                        A complete view of prediction activity
+                        generated by the Weather Intelligence AI model.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="clear-history-btn"
+                    id="clearHistoryButton"
+                    type="button"
+                    aria-label="Clear prediction history"
+                >
+
+                    🗑️
+
+                    <span>
+                        Clear History
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- ERROR -->
+
+            <div
+                class="history-error"
+                id="historyError"
+                role="alert"
+            ></div>
+
+
+            <!-- LOADING -->
+
+            <div
+                class="history-loading"
+                id="historyLoading"
+            >
+
+                <div
+                    class="history-spinner"
+                    aria-hidden="true"
+                ></div>
+
+                Loading prediction intelligence...
+
+            </div>
+
+
+            <!-- EMPTY -->
+
+            <div
+                class="history-empty"
+                id="historyEmpty"
+            >
+
+                <div
+                    class="history-empty-icon"
+                    aria-hidden="true"
+                >
+                    🌡️
+                </div>
+
+
+                <h3>
+                    No Predictions Yet
+                </h3>
+
+
+                <p>
+
+                    Your prediction records will appear here
+                    after you generate your first AI-powered
+                    temperature prediction.
+
+                </p>
+
+
+                <a href="/app">
+                    Generate First Prediction →
+                </a>
+
+            </div>
+
+
+            <!-- HISTORY LIST -->
+
+            <div
+                class="history-list"
+                id="historyList"
+            ></div>
+
+
+        </section>
+
+
+        <!-- ========================================================
+             AI INSIGHT
+             ======================================================== -->
+
+        <section class="history-insight">
+
+
+            <span class="history-section-label">
+                AI INSIGHT
+            </span>
+
+
+            <h3>
+                Prediction Activity Summary
+            </h3>
+
+
+            <p id="historyInsight">
+                Loading prediction activity...
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ============================================================
+         JAVASCRIPT
+         ============================================================ -->
+
+    <script>
+
+
+        /* ============================================================
+           ELEMENTS
+           ============================================================ */
+
+        const totalPredictions =
+            document.getElementById(
+                "totalPredictions"
+            );
+
+
+        const latestPrediction =
+            document.getElementById(
+                "latestPrediction"
+            );
+
+
+        const averagePrediction =
+            document.getElementById(
+                "averagePrediction"
+            );
+
+
+        const predictionRange =
+            document.getElementById(
+                "predictionRange"
+            );
+
+
+        const historyList =
+            document.getElementById(
+                "historyList"
+            );
+
+
+        const historyLoading =
+            document.getElementById(
+                "historyLoading"
+            );
+
+
+        const historyEmpty =
+            document.getElementById(
+                "historyEmpty"
+            );
+
+
+        const historyError =
+            document.getElementById(
+                "historyError"
+            );
+
+
+        const historyInsight =
+            document.getElementById(
+                "historyInsight"
+            );
+
+
+        const clearHistoryButton =
+            document.getElementById(
+                "clearHistoryButton"
+            );
+
+
+        /* ============================================================
+           FORMAT TEMPERATURE
+           ============================================================ */
+
+        function formatTemperature(value) {
+
+            const number =
+                Number(value);
+
+
+            if (!Number.isFinite(number)) {
+
+                return "--";
+
+            }
+
+
+            return (
+                number.toFixed(2)
+                + " °C"
+            );
+
+        }
+
+
+        /* ============================================================
+           ESCAPE HTML
+           ============================================================ */
+
+        function escapeHtml(value) {
+
+            if (
+                value === null ||
+                value === undefined
+            ) {
+
+                return "--";
+
+            }
+
+
+            return String(value)
+
+                .replace(
+                    /&/g,
+                    "&amp;"
+                )
+
+                .replace(
+                    /</g,
+                    "&lt;"
+                )
+
+                .replace(
+                    />/g,
+                    "&gt;"
+                )
+
+                .replace(
+                    /"/g,
+                    "&quot;"
+                )
+
+                .replace(
+                    /'/g,
+                    "&#039;"
+                );
+
+        }
+
+
+        /* ============================================================
+           FORMAT DETAIL
+           ============================================================ */
+
+        function formatDetail(
+            value,
+            suffix = ""
+        ) {
+
+            if (
+                value === null ||
+                value === undefined ||
+                value === ""
+            ) {
+
+                return "--";
+
+            }
+
+
+            const number =
+                Number(value);
+
+
+            if (
+                Number.isFinite(number) &&
+                typeof value !== "string"
+            ) {
+
+                return (
+                    number.toFixed(2)
+                    + suffix
+                );
+
+            }
+
+
+            return (
+                escapeHtml(value)
+                + suffix
+            );
+
+        }
+
+
+        /* ============================================================
+           GET TEMPERATURE
+           ============================================================ */
+
+        function getTemperature(record) {
+
+            return Number(
+                record.predicted_temperature ??
+                record.predicted_temperature_celsius ??
+                record.temperature
+            );
+
+        }
+
+
+        /* ============================================================
+           CREATE HISTORY CARD
+           ============================================================ */
+
+        function createHistoryCard(
+            record,
+            index
+        ) {
+
+            const temperature =
+                getTemperature(record);
+
+
+            const timestamp =
+                record.timestamp ||
+                record.date ||
+                "Unknown time";
+
+
+            const id =
+                record.id ??
+                (index + 1);
+
+
+            const dateParts = [
+
+                record.day,
+                record.month,
+                record.year
+
+            ]
+            .filter(
+                value =>
+                    value !== undefined &&
+                    value !== null &&
+                    value !== ""
+            )
+            .join(" / ");
+
+
+            return `
+
+                <article
+                    class="history-item"
+                    aria-label="Prediction record ${escapeHtml(id)}"
+                >
+
+
+                    <div class="history-record-top">
+
+
+                        <div class="history-record-identity">
+
+
+                            <div
+                                class="history-record-icon"
+                                aria-hidden="true"
+                            >
+                                🌡️
+                            </div>
+
+
+                            <div class="history-record-name">
+
+                                <strong>
+                                    Prediction #${escapeHtml(id)}
+                                </strong>
+
+                                <span>
+                                    ${escapeHtml(timestamp)}
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="history-temperature">
+
+
+                            <div
+                                class="history-temperature-icon"
+                                aria-hidden="true"
+                            >
+                                °C
+                            </div>
+
+
+                            <div class="history-temperature-text">
+
+                                <div class="history-temperature-label">
+                                    Predicted Temperature
+                                </div>
+
+                                <div class="history-temperature-value">
+                                    ${formatTemperature(temperature)}
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="history-details">
+
+
+                        <div class="history-detail">
+
+                            <span>
+                                Humidity
+                            </span>
+
+                            <strong>
+                                ${formatDetail(
+                                    record.humidity
+                                )}
+                            </strong>
+
+                        </div>
+
+
+                        <div class="history-detail">
+
+                            <span>
+                                Wind Speed
+                            </span>
+
+                            <strong>
+                                ${formatDetail(
+                                    record.wind_speed,
+                                    " km/h"
+                                )}
+                            </strong>
+
+                        </div>
+
+
+                        <div class="history-detail">
+
+                            <span>
+                                Pressure
+                            </span>
+
+                            <strong>
+                                ${formatDetail(
+                                    record.pressure,
+                                    " mb"
+                                )}
+                            </strong>
+
+                        </div>
+
+
+                        <div class="history-detail">
+
+                            <span>
+                                Visibility
+                            </span>
+
+                            <strong>
+                                ${formatDetail(
+                                    record.visibility,
+                                    " km"
+                                )}
+                            </strong>
+
+                        </div>
+
+
+                        <div class="history-detail">
+
+                            <span>
+                                Apparent Temperature
+                            </span>
+
+                            <strong>
+                                ${formatDetail(
+                                    record.apparent_temperature,
+                                    " °C"
+                                )}
+                            </strong>
+
+                        </div>
+
+
+                        <div class="history-detail">
+
+                            <span>
+                                Wind Bearing
+                            </span>
+
+                            <strong>
+                                ${formatDetail(
+                                    record.wind_bearing,
+                                    "°"
+                                )}
+                            </strong>
+
+                        </div>
+
+
+                        <div class="history-detail">
+
+                            <span>
+                                Cloud Cover
+                            </span>
+
+                            <strong>
+                                ${formatDetail(
+                                    record.cloud_cover ??
+                                    record.loud_cover
+                                )}
+                            </strong>
+
+                        </div>
+
+
+                        <div class="history-detail">
+
+                            <span>
+                                Date
+                            </span>
+
+                            <strong>
+                                ${escapeHtml(
+                                    dateParts || "--"
+                                )}
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+            `;
+
+        }
+
+
+        /* ============================================================
+           UPDATE SUMMARY
+           ============================================================ */
+
+        function updateSummary(history) {
+
+            const temperatures =
+                history
+
+                    .map(
+                        getTemperature
+                    )
+
+                    .filter(
+                        Number.isFinite
+                    );
+
+
+            const count =
+                temperatures.length;
+
+
+            totalPredictions.textContent =
+                count;
+
+
+            if (!count) {
+
+                latestPrediction.textContent =
+                    "--";
+
+
+                averagePrediction.textContent =
+                    "--";
+
+
+                predictionRange.textContent =
+                    "--";
+
+
+                historyInsight.textContent =
+                    "No prediction activity is available yet. Generate a prediction from the main Prediction page to start building your AI prediction history.";
+
+
+                return;
+
+            }
+
+
+            /*
+             * Backend is expected to return
+             * newest prediction first.
+             */
+
+            latestPrediction.textContent =
+                formatTemperature(
+                    temperatures[0]
+                );
+
+
+            const average =
+                temperatures.reduce(
+                    (
+                        total,
+                        value
+                    ) =>
+                        total + value,
+                    0
+                ) / count;
+
+
+            const highest =
+                Math.max(
+                    ...temperatures
+                );
+
+
+            const lowest =
+                Math.min(
+                    ...temperatures
+                );
+
+
+            averagePrediction.textContent =
+                formatTemperature(
+                    average
+                );
+
+
+            predictionRange.textContent =
+                `${lowest.toFixed(2)}–${highest.toFixed(2)} °C`;
+
+
+            historyInsight.textContent =
+                `The AI system has recorded ${count} prediction${count === 1 ? "" : "s"}. The latest predicted temperature is ${latestPrediction.textContent}, with an average predicted temperature of ${formatTemperature(average)} across all available records.`;
+
+        }
+
+
+        /* ============================================================
+           DISPLAY HISTORY
+           ============================================================ */
+
+        function displayHistory(history) {
+
+            historyLoading.style.display =
+                "none";
+
+
+            historyList.innerHTML =
+                "";
+
+
+            if (
+                !Array.isArray(history) ||
+                history.length === 0
+            ) {
+
+                historyEmpty.style.display =
+                    "block";
+
+
+                updateSummary([]);
+
+
+                return;
+
+            }
+
+
+            historyEmpty.style.display =
+                "none";
+
+
+            historyList.innerHTML =
+                history
+
+                    .map(
+                        (
+                            record,
+                            index
+                        ) =>
+                            createHistoryCard(
+                                record,
+                                index
+                            )
+                    )
+
+                    .join("");
+
+
+            updateSummary(
+                history
+            );
+
+        }
+
+
+        /* ============================================================
+           LOAD PREDICTION HISTORY
+           ============================================================ */
+
+        async function loadPredictionHistory() {
+
+            historyLoading.style.display =
+                "block";
+
+
+            historyEmpty.style.display =
+                "none";
+
+
+            historyError.style.display =
+                "none";
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "/prediction-history",
+                        {
+                            method: "GET",
+
+                            headers: {
+                                "Accept":
+                                    "application/json"
+                            },
+
+                            cache:
+                                "no-store"
+                        }
+                    );
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        `Server returned ${response.status}`
+                    );
+
+                }
+
+
+                const data =
+                    await response.json();
+
+
+                const history =
+                    Array.isArray(
+                        data.history
+                    )
+                        ? data.history
+                        : [];
+
+
+                displayHistory(
+                    history
+                );
+
+
+                console.log(
+                    "Prediction history loaded:",
+                    data
+                );
+
+            }
+
+
+            catch (error) {
+
+                console.error(
+                    "Prediction history error:",
+                    error
+                );
+
+
+                historyLoading.style.display =
+                    "none";
+
+
+                historyError.textContent =
+                    "Prediction history could not be loaded. Check the /prediction-history API endpoint and make sure the backend is running.";
+
+
+                historyError.style.display =
+                    "block";
+
+
+                historyInsight.textContent =
+                    "Prediction history data could not be loaded. Please verify that the FastAPI backend and /prediction-history endpoint are available.";
+
+            }
+
+        }
+
+
+        /* ============================================================
+           CLEAR PREDICTION HISTORY
+           ============================================================ */
+
+        async function clearPredictionHistory() {
+
+            const confirmed =
+                window.confirm(
+                    "Are you sure you want to clear all prediction history?"
+                );
+
+
+            if (!confirmed) {
+
+                return;
+
+            }
+
+
+            clearHistoryButton.disabled =
+                true;
+
+
+            clearHistoryButton.innerHTML =
+                "⏳ <span>Clearing...</span>";
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "/prediction-history",
+                        {
+                            method:
+                                "DELETE",
+
+                            headers: {
+                                "Accept":
+                                    "application/json"
+                            }
+                        }
+                    );
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        `Server returned ${response.status}`
+                    );
+
+                }
+
+
+                const data =
+                    await response.json();
+
+
+                console.log(
+                    "History cleared:",
+                    data
+                );
+
+
+                await loadPredictionHistory();
+
+            }
+
+
+            catch (error) {
+
+                console.error(
+                    "Clear history error:",
+                    error
+                );
+
+
+                historyError.textContent =
+                    "Prediction history could not be cleared. Please try again.";
+
+
+                historyError.style.display =
+                    "block";
+
+            }
+
+
+            finally {
+
+                clearHistoryButton.disabled =
+                    false;
+
+
+                clearHistoryButton.innerHTML =
+                    "🗑️ <span>Clear History</span>";
+
+            }
+
+        }
+
+
+        /* ============================================================
+           BUTTON EVENT
+           ============================================================ */
+
+        clearHistoryButton.addEventListener(
+            "click",
+            clearPredictionHistory
+        );
+
+
+        /* ============================================================
+           INITIALIZATION
+           ============================================================ */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                loadPredictionHistory();
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
