@@ -316,7 +316,7 @@ pip install -r requirements.txt
 ### 6️⃣ Start FastAPI Server
 
 ```powershell
-python -m uvicorn api.fastapi_app:app --reload --port 80001
+python -m uvicorn api.fastapi_app:app --reload --port 8001
 ```
 
 ### 7️⃣ Open FastAPI Documentation
