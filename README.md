@@ -112,6 +112,9 @@ Weather-Intelligence-AI/
 
 ## 📸 Screenshots
 
+### 🏠 Main Application
+![App Page](https://github.com/Abhigna13/Weather-Intelligence-AI/blob/main/api/agent/screenshots/app-page.png)
+
 ### 🤖 Weather Research Assistant
 ![Research Assistant](https://github.com/Abhigna13/Weather-Intelligence-AI/blob/main/api/agent/screenshots/research-assistant.png)
 
