@@ -316,13 +316,13 @@ pip install -r requirements.txt
 ### 6️⃣ Start FastAPI Server
 
 ```powershell
-python -m uvicorn api.fastapi_app:app --reload --port 8000
+python -m uvicorn api.fastapi_app:app --reload --port 80001
 ```
 
 ### 7️⃣ Open FastAPI Documentation
 
 ```text
-http://127.0.0.1:8000/docs
+http://127.0.0.1:8001/docs
 ```
 
 ### 8️⃣ Start Streamlit Interface
